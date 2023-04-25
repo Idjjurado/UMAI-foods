@@ -9,6 +9,11 @@ link:
 ## Usage
 
 ## Credit
+Shanna Morris
+
+Daniel Pacheco
+
+Trenton Sallee
 
 ## License
 MIT License (see repo)
