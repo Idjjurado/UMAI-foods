@@ -1,5 +1,5 @@
 # UMAI FOODS!
-![UMAI RENGOKU!](/Develop/assets/images/umai-tasty.gif "Rengoku")
+![UMAI RENGOKU!](/assets/images/umai-tasty.gif "Rengoku")
 
 link: 
 
