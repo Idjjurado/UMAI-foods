@@ -20,11 +20,11 @@ header {
     top: 0;
 }
 
-
-.carousel-caption {
-    color: white;
-text-shadow: 3px 3px 2px rgb(27, 27, 25);
-    }
+.navbar {
+    /* border-bottom: 3px solid var(--prussian-blue); */
+    box-shadow: 0px 15px 20px -10px var(--prussian-blue);
+    padding: 20px;
+}
 
 
 #hero {
@@ -64,8 +64,8 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
     box-shadow: 5px 5px 5px var(--walnut-brown);
     background-color: var(--walnut-brown);
     border: 2px solid var(--walnut-brown);
+} 
 
-}
 
 #ul {
     list-style: none;
@@ -78,15 +78,15 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
 }
 
 #about-us {
-    /* max-width: 30%; */
     background-color: var(--cadet-gray);
     width: 30%;
     margin: 100px;
     text-align: center;
-    border: 5px solid var(--prussian-blue);
+    /* border: 5px solid var(--prussian-blue); */
     border-radius: 20px;
     font-family: 'Indie Flower', cursive;
-    box-shadow: 10px 10px 10px var(--prussian-blue);
+    box-shadow: 0px 0px 15px 5px var(--prussian-blue);
+
 }
 
 #about-us h3 {
@@ -121,6 +121,7 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
     width: 75%;
     margin: 20px;
     border: 2px solid var(--prussian-blue);
+    border-radius: 20px;
 }
 
 #rrimage {
@@ -137,18 +138,26 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
 #carouselExampleIndicators {
     height: 35%;
     width: 35%;
-    position: relative;
     left: 50%;
-    bottom: 500px;
-    border: 5px solid var(--prussian-blue);
+    bottom: 650px;
+    /* border: 5px solid var(--prussian-blue); */
     border-radius: 20px;
-    box-shadow: 5px 5px 5px var(--prussian-blue);
-    padding: 5px;    
+    /* box-shadow: 5px 5px 5px 5px var(--prussian-blue); */
+    box-shadow: 0px 0px 15px 5px var(--prussian-blue);
+    padding: 5px;
+    background-color: var(--cadet-gray); 
+}
+
+.carousel-inner h2{
+    text-align: center;
+    font-family: 'Varela Round', sans-serif;
+    padding-bottom:  20px;
 }
 
 .carousel-inner img {
     border-radius: 20px;
     border: 5px solid var(--prussian-blue);
+    /* box-shadow: 5px 5px 5px var(--prussian-blue); */
 }
 
 .carousel-caption {
@@ -156,10 +165,15 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
     border-radius: 20px;
     opacity: 0.8;
     background-color: var(--mint-cream);
+    height: 30%;
+}
+.carousel-caption > h3 {
+    color: var(--walnut-brown);
+    text-shadow: 2px 5px var(--cadet-gray);
+    font-size: 200%;
+
 }
 
-.carousel-indicators {
-    opacity: 0;
+.carousel-caption > p {
+    color: var(--walnut-brown);
 }
-
-
