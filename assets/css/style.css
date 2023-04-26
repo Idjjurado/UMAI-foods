@@ -1,0 +1,12 @@
+:root {
+--walnut-brown: #585147ff;
+--mint-cream: #d0ded8ff;
+--cadet-gray: #93b1bfff;
+--verdigris: #5ca8a4ff;
+--prussian-blue: #143151ff
+}
+
+.carousel-caption {
+    color: white;
+text-shadow: 3px 3px 2px rgb(27, 27, 25);
+    }
