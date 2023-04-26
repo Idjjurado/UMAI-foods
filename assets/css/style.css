@@ -31,6 +31,40 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
     justify-content: center;
     align-items: center;
     background-color: var(--mint-cream);
-    /* position: absolute;
-    left: 100px; */
+    padding: 10px
+}
+
+.navbar {
+    background-color: var(--mint-cream);
+    
+}
+
+.container-fluid {
+    display: flex;
+}
+
+.nav-link {
+    flex-wrap: wrap;
+    background-color: var(--prussian-blue);
+    border-radius: 30px;
+    margin: 0px 100px 0px 100px;
+    padding: 20px;
+}
+
+#about-us {
+    background-color: var(--mint-cream);
+    width:fit-content;
+    margin: 30px;
+    text-align: center;
+    border: 5px solid var(--prussian-blue);
+    border-radius: 20px;
+    font-family: 'Indie Flower', cursive;
+    font-size: large;
+}
+
+#about-us h3 {
+    font-size: 40px;
+    /* font-family: 'Varela Round', sans-serif; */
+    font-family: 'Indie Flower', cursive;
+    /* font-family: 'Sedgwick Ave Display', cursive; */
 }
