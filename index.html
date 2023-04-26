@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 </head>
 <body>
@@ -22,7 +23,8 @@
       </header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <section class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" 
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <section class="collapse navbar-collapse" id="navbarTogglerDemo01">
@@ -48,7 +50,6 @@
           </section>
         </section>
       </nav>
-
       <aside>
         <h3>About Us</h3>
         <img src="./assets/images/Bobs burgers about  us.jpeg" alt="Bobs burgers family going wild">
@@ -60,6 +61,7 @@
            Based on a type of food be it spicy, sweet, or sour.   </p>
       </aside>
 
+  <!-- Carosousel Body -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -69,18 +71,23 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100" src="/assets/images/breakfast.png" alt="First slide">
-            <h5> breakfast </h5>
+            <div class="carousel-caption d-none d-md-block">
+            <h3> breakfast </h3>
             <p>youre going to love this</p>
+            </div>
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="/assets/images/potato.png" alt="Second slide">
-          <h5>potato</h5>
+            <div class="carousel-caption d-none d-md-block">
+          <h3>potato</h3>
           <p>no one knows what anime this is, and thats ok</p>
-         </div>
+          </div>
+          </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="/assets/images/ramen.png" alt="Third slide">
-          <h5>Ramen</h5>
-          <p>lets be real, this is what you thought of when you heard "an anime food app"</p>
+            <div class="carousel-caption d-none d-md-block">
+          <h3>Ramen</h3>
+          <p>lets be real, this is what you thought of</p>
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -93,8 +100,9 @@
         </a>
       </div>
       <footer>
-        <section>
-                <img src="./assets/images/Food Banner.jpg" alt="Image of foods placed on a table with the phrase lets eat at the bottom center." width="100%" height="300" class="d-inline-block align-text-top">
+        <section id="hero">
+                <img src="./assets/images/Food Banner.jpg" alt="Image of foods placed on a table with the phrase lets eat at the bottom center." 
+                width="100%" height="300" class="d-inline-block align-text-top">
         </section>
       </footer>
 </body>
@@ -111,7 +119,8 @@
     crossorigin="anonymous">
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" 
+    crossorigin="anonymous"></script>
 
 <script src="./assets/js/script.js"></script>
 </html>
