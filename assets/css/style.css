@@ -132,6 +132,10 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
     flex-direction: row;
 }
 
+#random-ingredients {
+    width: 85%;
+}
+
 #carouselExampleIndicators {
     height: 35%;
     width: 35%;
