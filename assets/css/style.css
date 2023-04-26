@@ -6,6 +6,10 @@
 --prussian-blue: #143151ff
 }
 
+/* * {
+    border: 2px solid black;
+} */
+
 .carousel-caption {
     color: white;
 text-shadow: 3px 3px 2px rgb(27, 27, 25);
@@ -19,5 +23,14 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
 }
 
 #hero {
-    display: 
+    visibility: hidden; 
+}
+
+#headerTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mint-cream);
+    /* position: absolute;
+    left: 100px; */
 }
