@@ -29,3 +29,19 @@ const settingsYuumly = {
 $.ajax(settingsYuumly).done(function (response) {
 	console.log(response);
 });
+
+const settings = {
+	async: true,
+	crossDomain: true,
+	url: 'https://themealdb.p.rapidapi.com/filter.php?i=chicken_breast',
+	method: 'GET',
+	headers: {
+		'content-type': 'application/json',
+		'X-RapidAPI-Key': '1',
+		'X-RapidAPI-Host': 'themealdb.p.rapidapi.com'
+	}
+};
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});
