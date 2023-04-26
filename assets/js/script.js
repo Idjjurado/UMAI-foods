@@ -61,6 +61,6 @@ const settingsRandommeal = {
 $.ajax(settingsRandommeal).done(function (response) {
 	console.log(response);
 	$("#recipe-title").text(response.meals[0].strMeal);
-	$("#BBimage").attr("src", response.meals[0].strMealThumb);
+	$("#rrimage").attr("src", response.meals[0].strMealThumb);
 
 });
