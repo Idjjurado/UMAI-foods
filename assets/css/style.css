@@ -8,11 +8,16 @@
 
 * {
     /* border: 2px solid black; */
-    background-color: var(--cadet-gray);
 }
 
 body {
+    background-color: var(--mint-cream);
+}
+
+header {
     background-color: var(--cadet-gray);
+    position: sticky;
+    top: 0;
 }
 
 
@@ -50,7 +55,6 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
     margin: 20px 100px 0px 100px;
     /* padding: 20px; */
     font-family: 'Varela Round', sans-serif;
-    color: var(--mint-cream);
     border: 2px solid var(--prussian-blue);
     font-size: 150%;
 }
@@ -135,7 +139,7 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
     width: 35%;
     position: relative;
     left: 50%;
-    bottom: 420px;
+    bottom: 500px;
     border: 5px solid var(--prussian-blue);
     border-radius: 20px;
     box-shadow: 5px 5px 5px var(--prussian-blue);
@@ -151,6 +155,7 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
     border: 2px solid var(--prussian-blue);
     border-radius: 20px;
     opacity: 0.8;
+    background-color: var(--mint-cream);
 }
 
 .carousel-indicators {
