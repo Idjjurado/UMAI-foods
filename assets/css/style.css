@@ -122,6 +122,12 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
     border: 2px solid var(--prussian-blue);
 }
 
+#rrimage {
+    width: 75%;
+    margin: 20px;
+    border: 2px solid var(--prussian-blue);
+}
+
 #random-recipe {
     display: flex;
     flex-direction: row;
