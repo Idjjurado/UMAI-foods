@@ -98,7 +98,6 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
 
 #surprise-recipe {
     background-color: var(--verdigris);
-    width: 30%;
     margin: 30px;
     text-align: center;
     border: 5px solid var(--prussian-blue);
@@ -154,8 +153,8 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
     /* background-color: aliceblue; */
 }
 
-.carousel-indicators {
-    border-bottom-radius;
-}
+/* .carousel-indicators {
+    border-bottom-radius: ;
+} */
 
 
