@@ -26,7 +26,6 @@ header {
     padding: 20px;
 }
 
-
 #hero {
     visibility: hidden; 
 }
@@ -99,7 +98,6 @@ header {
 
 #surprise-recipe {
     background-color: var(--verdigris);
-    width: 30%;
     margin: 30px;
     text-align: center;
     border: 5px solid var(--prussian-blue);
@@ -133,6 +131,10 @@ header {
 #random-recipe {
     display: flex;
     flex-direction: row;
+}
+
+#random-ingredients {
+    width: 85%;
 }
 
 #carouselExampleIndicators {
