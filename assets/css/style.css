@@ -26,7 +26,6 @@ header {
 text-shadow: 3px 3px 2px rgb(27, 27, 25);
     }
 
-
 #hero {
     visibility: hidden; 
 }
@@ -161,5 +160,4 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
 .carousel-indicators {
     opacity: 0;
 }
-
 
