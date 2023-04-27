@@ -8,11 +8,16 @@
 
 * {
     /* border: 2px solid black; */
-    background-color: var(--cadet-gray);
 }
 
 body {
+    background-color: var(--mint-cream);
+}
+
+header {
     background-color: var(--cadet-gray);
+    position: sticky;
+    top: 0;
 }
 
 
@@ -20,13 +25,6 @@ body {
     color: white;
 text-shadow: 3px 3px 2px rgb(27, 27, 25);
     }
-
-
-/* #carouselExampleIndicators {
-    height: 35%;
-    width: 35%;
-    float: right;
-} */
 
 #hero {
     visibility: hidden; 
@@ -46,16 +44,18 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
 }
 
 .nav-link {
-    /* flex-wrap: wrap; */
     text-align: center;
+    width: 200px;
+    height: fit-content;
     position: relative;
+    left: 100px;
     background-color: var(--verdigris);
-    border-radius: 30px;
-    margin: 0px 100px 0px 100px;
-    padding: 20px;
+    border-radius: 20px;
+    margin: 20px 100px 0px 100px;
+    /* padding: 20px; */
     font-family: 'Varela Round', sans-serif;
-    color: var(--mint-cream);
     border: 2px solid var(--prussian-blue);
+    font-size: 150%;
 }
 
 .nav-link:hover {
@@ -78,9 +78,9 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
 
 #about-us {
     /* max-width: 30%; */
-    background-color: var(--verdigris);
+    background-color: var(--cadet-gray);
     width: 30%;
-    margin: 30px;
+    margin: 100px;
     text-align: center;
     border: 5px solid var(--prussian-blue);
     border-radius: 20px;
@@ -141,8 +141,8 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
     width: 35%;
     position: relative;
     left: 50%;
-    bottom: 400px;
-    border: 2px solid var(--prussian-blue);
+    bottom: 500px;
+    border: 5px solid var(--prussian-blue);
     border-radius: 20px;
     box-shadow: 5px 5px 5px var(--prussian-blue);
     padding: 5px;    
@@ -150,15 +150,17 @@ text-shadow: 3px 3px 2px rgb(27, 27, 25);
 
 .carousel-inner img {
     border-radius: 20px;
+    border: 5px solid var(--prussian-blue);
 }
 
 .carousel-caption {
+    border: 2px solid var(--prussian-blue);
     border-radius: 20px;
-    /* background-color: aliceblue; */
+    opacity: 0.8;
+    background-color: var(--mint-cream);
 }
 
-/* .carousel-indicators {
-    border-bottom-radius: ;
-} */
-
+.carousel-indicators {
+    opacity: 0;
+}
 
