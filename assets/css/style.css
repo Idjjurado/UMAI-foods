@@ -7,7 +7,7 @@
 }
 
 * {
-    /* border: 2px solid black; */
+    border: 2px solid black;
 }
 
 body {
@@ -18,6 +18,10 @@ header {
     background-color: var(--cadet-gray);
     position: sticky;
     top: 0;
+}
+
+#mainEL {
+    background-color: var(--mint-cream);
 }
 
 .navbar {
@@ -63,8 +67,8 @@ header {
     box-shadow: 5px 5px 5px var(--walnut-brown);
     background-color: var(--walnut-brown);
     border: 2px solid var(--walnut-brown);
-} 
-
+    content: url("https://see.fontimg.com/api/renderfont4/jEMd9/eyJyIjoiZnMiLCJoIjoyMiwidyI6MTAwMCwiZnMiOjIyLCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/dW1hbWk/comback-home-regular.png");
+}
 
 #ul {
     list-style: none;
