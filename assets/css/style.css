@@ -131,13 +131,44 @@ header {
     border: 2px solid var(--prussian-blue);
 }
 
+
+#surprise-anime {
+    background-color: var(--verdigris);
+    margin: 30px;
+    text-align: center;
+    border: 5px solid var(--prussian-blue);
+    border-radius: 20px;
+    font-family: 'Indie Flower', cursive;
+    box-shadow: 10px 10px 10px var(--prussian-blue);
+}
+
+#surprise-anime h3 {
+    font-size: 40px;
+    margin-top: 20px;
+    font-family: 'Varela Round', sans-serif;
+    /* font-family: 'Indie Flower', cursive; */
+    /* font-family: 'Sedgwick Ave Display', cursive; */
+}
+
+#animeimage {
+    width: 75%;
+    margin: 20px;
+    border: 2px solid var(--prussian-blue);
+}
+
+
 #random-recipe {
     display: flex;
     flex-direction: row;
+    width: 33%;
 }
 
 #random-ingredients {
-    width: 85%;
+    width: 33%;
+}
+
+#random-anime {
+    width: 33%;
 }
 
 #carouselExampleIndicators {
