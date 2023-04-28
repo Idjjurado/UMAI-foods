@@ -123,6 +123,7 @@ $.ajax(settingsRandommeal).done(function (response) {
 	$("#recipe-title").text(recipeInfo.strMeal);
 	$("#rrimage").attr("src", recipeInfo.strMealThumb);
 	$("#instruction-block").text(recipeInfo.strInstructions);
+	$("#recipe-video").attr(recipeInfo.strYoutube);
 
 
 	for (var i = 1; i < 20; i++) {
@@ -146,7 +147,7 @@ function sample(arr) {
 }
 
 const id = sample(animeIds)
-const settings = {
+const settingsAnime = {
 	async: true,
 	crossDomain: true,
 	url: `https://anime-db.p.rapidapi.com/anime/by-id/${id}`,
@@ -159,6 +160,13 @@ const settings = {
 };
 
 
-$.ajax(settings).done(function (response) {
-	console.log(response);
+$.ajax(settingsAnime).done(function (animeIds) {
+	console.log(animeIds);
+	console.log(animeIds.link);
+	
+	$("#anime-title").text(animeIds.title);
+	$("#animeimage").attr("src", animeIds.image);
+	$("#anime-synopsis").text(animeIds.synopsis);
+	$("#link-anime").attr("href", animeIds.link);
+
 });
