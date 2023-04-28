@@ -5,10 +5,10 @@
 --verdigris: #5ca8a4ff;
 --prussian-blue: #143151ff;
 }
-
+/* 
 * {
     border: 2px solid black;
-}
+} */
 
 body {
     background-color: var(--mint-cream);
@@ -49,7 +49,7 @@ header {
 
 .nav-link {
     text-align: center;
-    width: 200px;
+    width: 250px;
     height: fit-content;
     position: relative;
     left: 100px;
@@ -62,13 +62,12 @@ header {
     font-size: 150%;
 }
 
-.nav-link:hover {
+/* .nav-link:hover {
     cursor: pointer;
     box-shadow: 5px 5px 5px var(--walnut-brown);
-    background-color: var(--walnut-brown);
+    background-color: red;
     border: 2px solid var(--walnut-brown);
-    content: url("https://see.fontimg.com/api/renderfont4/jEMd9/eyJyIjoiZnMiLCJoIjoyMiwidyI6MTAwMCwiZnMiOjIyLCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/dW1hbWk/comback-home-regular.png");
-}
+} */
 
 #ul {
     list-style: none;
