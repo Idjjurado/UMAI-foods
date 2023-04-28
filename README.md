@@ -1,5 +1,5 @@
 # UMAI FOODS!
-![UMAI RENGOKU!](/Develop/assets/images/umai-tasty.gif "Rengoku")
+![UMAI RENGOKU!](/assets/images/umai-tasty.gif "Rengoku")
 
 link: 
 
@@ -9,11 +9,13 @@ link:
 ## Usage
 
 ## Credit
-Shanna Morris
+Shanna Morris: https://github.com/ShannaRenee
 
-Daniel Pacheco
+Daniel Pacheco: https://github.com/Daniel-0117
 
-Trenton Sallee
+Trenton Sallee: https://github.com/trentonsallee
+
+Rapid API: https://rapidapi.com/blog/how-to-use-an-api-with-javascript/
 
 ## License
 MIT License (see repo)

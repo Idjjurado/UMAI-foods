@@ -1,0 +1,181 @@
+:root {
+--walnut-brown: #585147ff;
+--mint-cream: #d0ded8ff;
+--cadet-gray: #93b1bfff;
+--verdigris: #5ca8a4ff;
+--prussian-blue: #143151ff;
+}
+
+* {
+    /* border: 2px solid black; */
+}
+
+body {
+    background-color: var(--mint-cream);
+}
+
+header {
+    background-color: var(--cadet-gray);
+    position: sticky;
+    top: 0;
+}
+
+.navbar {
+    /* border-bottom: 3px solid var(--prussian-blue); */
+    box-shadow: 0px 15px 20px -10px var(--prussian-blue);
+    padding: 20px;
+}
+
+#hero {
+    visibility: hidden; 
+}
+
+#headerTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cadet-gray);
+    padding: 10px
+}
+
+.navbar {
+    background-color: var(--cadet-gray);
+    display: flex;
+}
+
+.nav-link {
+    text-align: center;
+    width: 200px;
+    height: fit-content;
+    position: relative;
+    left: 100px;
+    background-color: var(--verdigris);
+    border-radius: 20px;
+    margin: 20px 100px 0px 100px;
+    /* padding: 20px; */
+    font-family: 'Varela Round', sans-serif;
+    border: 2px solid var(--prussian-blue);
+    font-size: 150%;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 5px var(--walnut-brown);
+    background-color: var(--walnut-brown);
+    border: 2px solid var(--walnut-brown);
+} 
+
+
+#ul {
+    list-style: none;
+    display: inline-block;
+}
+
+#ul li {
+    float: left;
+    margin: 0 20px;
+}
+
+#about-us {
+    background-color: var(--cadet-gray);
+    width: 30%;
+    margin: 100px;
+    text-align: center;
+    /* border: 5px solid var(--prussian-blue); */
+    border-radius: 20px;
+    font-family: 'Indie Flower', cursive;
+    box-shadow: 0px 0px 15px 5px var(--prussian-blue);
+
+}
+
+#about-us h3 {
+    font-size: 40px;
+    margin-top: 20px;
+    font-family: 'Varela Round', sans-serif;
+    /* font-family: 'Indie Flower', cursive; */
+    /* font-family: 'Sedgwick Ave Display', cursive; */
+}
+
+#surprise-recipe {
+    background-color: var(--verdigris);
+    margin: 30px;
+    text-align: center;
+    border: 5px solid var(--prussian-blue);
+    border-radius: 20px;
+    font-family: 'Indie Flower', cursive;
+    box-shadow: 10px 10px 10px var(--prussian-blue);
+}
+
+#surprise-recipe h3 {
+    font-size: 40px;
+    margin-top: 20px;
+    font-family: 'Varela Round', sans-serif;
+    /* font-family: 'Indie Flower', cursive; */
+    /* font-family: 'Sedgwick Ave Display', cursive; */
+}
+
+
+#BBimage {
+    width: 75%;
+    margin: 20px;
+    border: 2px solid var(--prussian-blue);
+    border-radius: 20px;
+}
+
+#rrimage {
+    width: 75%;
+    margin: 20px;
+    border: 2px solid var(--prussian-blue);
+}
+
+#random-recipe {
+    display: flex;
+    flex-direction: row;
+}
+
+#random-ingredients {
+    width: 85%;
+}
+
+#carouselExampleIndicators {
+    height: 35%;
+    width: 35%;
+    left: 50%;
+    bottom: 650px;
+    /* border: 5px solid var(--prussian-blue); */
+    border-radius: 20px;
+    /* box-shadow: 5px 5px 5px 5px var(--prussian-blue); */
+    box-shadow: 0px 0px 15px 5px var(--prussian-blue);
+    padding: 5px;
+    background-color: var(--cadet-gray); 
+}
+
+.carousel-inner h2{
+    text-align: center;
+    font-family: 'Varela Round', sans-serif;
+    padding-bottom:  20px;
+}
+
+.carousel-inner img {
+    border-radius: 20px;
+    border: 5px solid var(--prussian-blue);
+    /* box-shadow: 5px 5px 5px var(--prussian-blue); */
+}
+
+.carousel-caption {
+    border: 2px solid var(--prussian-blue);
+    border-radius: 20px;
+    opacity: 0.8;
+    background-color: var(--mint-cream);
+    height: 30%;
+}
+.carousel-caption > h3 {
+    color: var(--walnut-brown);
+    text-shadow: 2px 5px var(--cadet-gray);
+    font-size: 200%;
+
+}
+
+.carousel-caption > p {
+    color: var(--walnut-brown);
+}
