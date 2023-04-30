@@ -114,59 +114,121 @@ const settingsRandommeal = {
 	}
 };
 
-$.ajax(settingsRandommeal).done(function (response) {
-	console.log(response);
-	
-	const recipeInfo = response.meals[0];
-	const addList = document.querySelector("#ingredients-list")
-	
-	$("#recipe-title").text(recipeInfo.strMeal);
-	$("#rrimage").attr("src", recipeInfo.strMealThumb);
-	$("#instruction-block").text(recipeInfo.strInstructions);
-	$("#recipe-video").attr(recipeInfo.strYoutube);
+$( "#surprise" ).on( "click", function() {
+	$.ajax(settingsRandommeal).done(function (response) {
+		console.log(response);
+		
+		const recipeInfo = response.meals[0];
+		const addList = document.querySelector("#ingredients-list")
+		
+		$("#recipe-title").text(recipeInfo.strMeal);
+		$("#rrimage").attr("src", recipeInfo.strMealThumb);
+		$("#instruction-block").text(recipeInfo.strInstructions);
+		$("#recipe-video").attr(recipeInfo.strYoutube);
 
 
-	for (var i = 1; i < 20; i++) {
-		if (recipeInfo["strIngredient" + i].length > 0) {
-			const ingredList = document.createElement("li");
-			const cookingMeasure = recipeInfo["strMeasure" + i];
-			const ingredName = recipeInfo["strIngredient" + i];
+		for (var i = 1; i < 20; i++) {
+			if (recipeInfo["strIngredient" + i].length > 0) {
+				const ingredList = document.createElement("li");
+				const cookingMeasure = recipeInfo["strMeasure" + i];
+				const ingredName = recipeInfo["strIngredient" + i];
 
-			ingredList.textContent = cookingMeasure + " " + ingredName;
-			addList.appendChild(ingredList);
+				ingredList.textContent = cookingMeasure + " " + ingredName;
+				addList.appendChild(ingredList);
 
-			console.log(recipeInfo["strIngredient" + i].length > 0);
+				console.log(recipeInfo["strIngredient" + i].length > 0);
+			}
 		}
+
+	});
+
+	function sample(arr) {
+		const index = Math.floor(Math.random()*arr.length)
+		return arr[index]
 	}
 
+	const id = sample(animeIds)
+	const settingsAnime = {
+		async: true,
+		crossDomain: true,
+		url: `https://anime-db.p.rapidapi.com/anime/by-id/${id}`,
+		method: 'GET',
+		headers: {
+			'content-type': 'application/octet-stream',
+			'X-RapidAPI-Key': '8fba490658msh30c9e8c9a48dc6bp15f465jsnfa24de2a900b',
+			'X-RapidAPI-Host': 'anime-db.p.rapidapi.com'
+		}
+	};
+
+
+	$.ajax(settingsAnime).done(function (animeIds) {
+		console.log(animeIds);
+		console.log(animeIds.link);
+		
+		$("#anime-title").text(animeIds.title);
+		$("#animeimage").attr("src", animeIds.image);
+		$("#anime-synopsis").text(animeIds.synopsis);
+		$("#link-anime").attr("href", animeIds.link);
+
+	});
 });
 
-function sample(arr) {
-	const index = Math.floor(Math.random()*arr.length)
-	return arr[index]
-}
 
-const id = sample(animeIds)
-const settingsAnime = {
-	async: true,
-	crossDomain: true,
-	url: `https://anime-db.p.rapidapi.com/anime/by-id/${id}`,
-	method: 'GET',
-	headers: {
-		'content-type': 'application/octet-stream',
-		'X-RapidAPI-Key': '8fba490658msh30c9e8c9a48dc6bp15f465jsnfa24de2a900b',
-		'X-RapidAPI-Host': 'anime-db.p.rapidapi.com'
-	}
-};
+$( "#surprise" ).on( "click", function() {
+		$.ajax(settingsRandommeal).done(function (response) {
+			console.log(response);
+			
+			const recipeInfo = response.meals[0];
+			const addList = document.querySelector("#ingredients-list")
+			
+			$("#recipe-title").text(recipeInfo.strMeal);
+			$("#rrimage").attr("src", recipeInfo.strMealThumb);
+			$("#instruction-block").text(recipeInfo.strInstructions);
+			$("#recipe-video").attr(recipeInfo.strYoutube);
 
 
-$.ajax(settingsAnime).done(function (animeIds) {
-	console.log(animeIds);
-	console.log(animeIds.link);
-	
-	$("#anime-title").text(animeIds.title);
-	$("#animeimage").attr("src", animeIds.image);
-	$("#anime-synopsis").text(animeIds.synopsis);
-	$("#link-anime").attr("href", animeIds.link);
+			for (var i = 1; i < 20; i++) {
+				if (recipeInfo["strIngredient" + i].length > 0) {
+					const ingredList = document.createElement("li");
+					const cookingMeasure = recipeInfo["strMeasure" + i];
+					const ingredName = recipeInfo["strIngredient" + i];
 
-});
+					ingredList.textContent = cookingMeasure + " " + ingredName;
+					addList.appendChild(ingredList);
+
+					console.log(recipeInfo["strIngredient" + i].length > 0);
+				}
+			}
+
+		});
+
+		function sample(arr) {
+			const index = Math.floor(Math.random()*arr.length)
+			return arr[index]
+		}
+
+		const id = sample(animeIds)
+		const settingsAnime = {
+			async: true,
+			crossDomain: true,
+			url: `https://anime-db.p.rapidapi.com/anime/by-id/${id}`,
+			method: 'GET',
+			headers: {
+				'content-type': 'application/octet-stream',
+				'X-RapidAPI-Key': '8fba490658msh30c9e8c9a48dc6bp15f465jsnfa24de2a900b',
+				'X-RapidAPI-Host': 'anime-db.p.rapidapi.com'
+			}
+		};
+
+
+		$.ajax(settingsAnime).done(function (animeIds) {
+			console.log(animeIds);
+			console.log(animeIds.link);
+			
+			$("#anime-title").text(animeIds.title);
+			$("#animeimage").attr("src", animeIds.image);
+			$("#anime-synopsis").text(animeIds.synopsis);
+			$("#link-anime").attr("href", animeIds.link);
+
+		});
+	});
