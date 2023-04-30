@@ -20,18 +20,22 @@ header {
     top: 0;
 }
 
+.navbar-nav {
+    width: 100%;
+}
+
 .nav-item {
     height: fit-content;
     width: fit-content;
     text-align: center;
     min-width: 250px;
-    min-height: 50px;
+    min-height: 70px;
     position: relative;
     right: 50px;
     background-color: var(--verdigris);
     border-radius: 20px;
     margin: 20px 50px 0px 50px;
-    padding: 0px;
+    padding-top: 10px;
     border: 2px solid var(--prussian-blue);
     font-size: 150%;
 }
@@ -56,13 +60,8 @@ header {
 }
 
 .navbar {
-    /* border-bottom: 3px solid var(--prussian-blue); */
     box-shadow: 0px 15px 20px -10px var(--prussian-blue);
     padding: 20px;
-}
-
-#hero {
-    visibility: hidden; 
 }
 
 header h3 {
@@ -75,7 +74,6 @@ header h3 {
 
 header h3:hover {
     content-visibility: visible;
-    /* background-color: var(--walnut-brown); */
 }
 
 #headerTitle {
@@ -94,8 +92,6 @@ header h3:hover {
 .nav-link {
     padding: 0;
 }
-
-
 
 .nav-link img {
     height: 35px;
