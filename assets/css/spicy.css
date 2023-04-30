@@ -1,0 +1,167 @@
+:root {
+    --black-bean: #481812ff;
+    --ou-crimson: rgb(177, 26, 15);
+    --brown: rgb(202, 112, 80);
+    --sunglow: #ffc853ff;
+    --beige: #faf9e3ff;
+        }
+        
+    /* * {
+        border: 2px solid black;
+    } */
+    
+    main {
+       background-color: var(--brown);
+    }
+      
+    header {
+        background-color: var(--brown);
+        position: sticky;
+        top: 0;
+    }
+      
+    .navbar {
+        box-shadow: 0px 15px 20px -10px var(--black-bean);
+        padding: 20px;
+    }
+    
+    #headerTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--black-bean);
+        padding: 10px;
+    }
+    
+    #headerTitle a {
+    background-color: var(--black-bean);
+    border-radius: 20px;
+    padding: 20px;
+    }
+    
+    /* .nav-item {
+        height: fit-content;
+        width: fit-content;
+        text-align: center;
+        min-width: 250px;
+        min-height: 50px;
+        position: relative;
+        right: 80px;
+        background-color: var(--verdigris);
+        border-radius: 20px;
+        margin: 20px 50px 0px 50px;
+        padding: 0px;
+        border: 2px solid var(--ghost-white);
+        font-size: 150%;
+    } */
+    
+       
+       
+        
+        .navbar {
+            background-color: var(--black-bean);
+            display: flex;
+        }
+    
+        .hover-text {
+            display: none;
+        }
+    
+        .three:hover {
+            width: 300px;
+            height: 80px;
+            position: relative;
+            right: 50px;
+        }
+    
+        .nav-item img:hover {
+            display: none;
+        }
+        
+        .nav-item img:hover + .hover-text {
+            display: inline;
+            font-size: 30px;
+            padding: 0;
+            border-radius: 10px;
+            font-family: 'Mochiy Pop P One', sans-serif;
+            color: var(--black-bean);
+        }
+        
+        
+        .nav-item:hover + .nav-item img:hover {
+            display: none;
+        }
+        
+        .nav-link {
+            text-align: center;
+            width: 200px;
+            height: fit-content;
+            position: relative;
+            background-color: var(--ou-crimson);
+            border-radius: 20px;
+            margin: 20px 100px 0px 100px;
+            border: 2px solid var(--beige);
+            font-size: 150%;
+        }
+        
+        .nav-link:hover {
+            cursor: pointer;
+            background-color: var(--beige);
+            border: 2px solid var(--beige);
+        }
+    
+      
+        
+        
+        #ul {
+            list-style: none;
+            display: inline-block;
+        }
+        
+        #ul li {
+            float: left;
+            margin: 0 20px;
+        }
+        
+        #rrimage {
+            width: 75%;
+            margin: 20px;
+            border: 2px solid var(--black-bean);
+            border-radius: 25px;
+        }
+        
+        .card-style {
+            background-color: var(--ou-crimson);
+            font-family: 'Maven Pro', sans-serif;
+            color: rgb(221, 218, 213);
+            /* border: 2px solid black; */
+            border-radius: 25px;
+            margin: 15px;
+            margin-top: 50px;
+            box-shadow: 0px 0px 15px 5px red;
+            text-align: center;
+            width: 20%;
+            height: 100%;
+            padding: 20px;
+        }
+        
+        .card-style h3 {
+            margin-top: 20px;
+            font-size: 40px;
+        }
+        
+        .card-style a {
+            color: var(--beige);
+            padding: 10px;
+            border-radius: 10px;
+            background-color: var(--black-bean);
+        }
+        
+        .card-style a:hover {
+            color: black;
+            padding: 10px;
+            border: 2px solid var(--black-bean);
+            border-radius: 10px;
+            background-color: var(--ou-crimson);
+            box-shadow: 5px 5px 5px var(--black-bean);
+        }
