@@ -1,0 +1,117 @@
+:root {
+--night: #111212ff;
+--dark-purple: rgb(55, 18, 80);
+--school-bus-yellow: rgb(241, 221, 90);
+--brunswick-green: rgb(43, 119, 106);
+--snow: rgb(221, 218, 213);
+}
+
+
+main {
+ background-color: var(--school-bus-yellow);
+}
+
+header {
+    background-color: var(--brunswick-green);
+    position: sticky;
+    top: 0;
+}
+
+.navbar {
+    box-shadow: 0px 15px 20px -10px var(--night);
+    padding: 20px;
+}
+
+#headerTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--brunswick-green);
+    padding: 10px;
+}
+
+.navbar {
+    background-color: var(--brunswick-green);
+    display: flex;
+}
+
+.nav-link {
+    text-align: center;
+    width: 200px;
+    height: fit-content;
+    position: relative;
+    left: 100px;
+    background-color: var(--dark-purple);
+    border-radius: 20px;
+    margin: 20px 100px 0px 100px;
+    /* padding: 20px; */
+    font-family: 'Times New Roman', Times, serif;
+    border: 2px solid var(--snow);
+    font-size: 150%;
+    color: var(--snow);
+}
+
+.nav-link:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 5px var(--snow);
+    background-color: var(--snow);
+    border: 2px solid var(--snow);
+}
+
+
+#ul {
+    list-style: none;
+    display: inline-block;
+}
+
+#ul li {
+    float: left;
+    margin: 0 20px;
+}
+
+#rrimage {
+    width: 75%;
+    margin: 20px;
+    border: 2px solid var(--dark-purple);
+    border-radius: 25px;
+}
+
+.card-style {
+    background-color: var(--brunswick-green);
+    font-family: 'Maven Pro', sans-serif;
+    color: rgb(221, 218, 213);
+    /* border: 2px solid black; */
+    border-radius: 25px;
+    margin: 50px;
+    box-shadow: 0px 0px 15px 5px var(--night);
+    text-align: center;
+    width: 33%;
+    padding: 20px;
+}
+
+.card-style h3 {
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.card-style a {
+    color: var(--snow);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--dark-purple);
+}
+
+.card-style a:hover {
+    color: var(--night);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--school-bus-yellow);
+    box-shadow: 5px 5px 5px var(--night);
+}
+
+#animeimage {
+    width: 75%;
+    margin: 20px;
+    border: 2px solid var(--dark-purple);
+    border-radius: 25px;
+}
