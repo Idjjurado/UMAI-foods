@@ -55,9 +55,7 @@ header {
     height: 35px;
 }
 
-#mainEL {
-    background-color: var(--mint-cream);
-}
+
 
 .navbar {
     box-shadow: 0px 15px 20px -10px var(--prussian-blue);
@@ -122,25 +120,38 @@ header h3:hover {
     display: none;
 }
 
+#mainEL {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--mint-cream);
+}
+
 
 #about-us {
     background-color: var(--cadet-gray);
-    width: 30%;
+    width: 60%;
     margin: 100px;
     text-align: center;
-    /* border: 5px solid var(--prussian-blue); */
     border-radius: 20px;
     font-family: 'Mochiy Pop P One', sans-serif;
     box-shadow: 0px 0px 15px 5px var(--prussian-blue);
-
+    padding: 20px;
 }
 
 #about-us h3 {
     font-size: 40px;
     margin-top: 20px;
-    font-family: 'Varela Round', sans-serif;
-    /* font-family: 'Indie Flower', cursive; */
-    /* font-family: 'Sedgwick Ave Display', cursive; */
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+#firstEL {
+    width: 50%;
+    background-color: var(--mint-cream);
+}
+
+#secondEL {
+    background-color: var(--mint-cream);
+    width: 50%;
 }
 
 
@@ -152,28 +163,24 @@ header h3:hover {
 }
 
 #carouselExampleIndicators {
-    height: 35%;
-    width: 35%;
-    left: 50%;
-    bottom: 650px;
-    /* border: 5px solid var(--prussian-blue); */
+    height: fit-content;
+    width: 70%;
+    margin: 100px;
     border-radius: 20px;
-    /* box-shadow: 5px 5px 5px 5px var(--prussian-blue); */
-    box-shadow: 0px 0px 15px 5px var(--prussian-blue);
+    /* box-shadow: 0px 0px 15px 5px var(--prussian-blue); */
     padding: 5px;
-    background-color: var(--cadet-gray); 
+    /* background-color: var(--cadet-gray); */
 }
 
 .carousel-inner h2{
     text-align: center;
-    font-family: 'Varela Round', sans-serif;
     padding-bottom:  20px;
+    font-family: 'Mochiy Pop P One', sans-serif;
 }
 
 .carousel-inner img {
     border-radius: 20px;
     border: 5px solid var(--prussian-blue);
-    /* box-shadow: 5px 5px 5px var(--prussian-blue); */
 }
 
 .carousel-caption {
@@ -193,3 +200,52 @@ header h3:hover {
 .carousel-caption > p {
     color: var(--walnut-brown);
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 1000px;
+    background-color: var(--cadet-gray);
+    text-align: center;
+    border-radius: 25px;
+    border: 5px solid var(--prussian-blue);
+
+}
+
+.container h3 {
+    height: 10%;
+    width: 100%;
+    padding-top: 7px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+
+}
+
+#favorites {
+    display: flex;
+    align-items: end;
+    background-color: var(--cadet-gray);
+    height: 90%;
+    width: 100%;
+}
+
+#favorites div {
+    background-color: var(--mint-cream);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px var(--walnut-brown);
+    font-family: 'Mochiy Pop P One', sans-serif;
+    height: 95%;
+}
+
+footer {
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    padding-top: 75px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+
+}
+
+
