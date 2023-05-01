@@ -31,10 +31,10 @@ header {
     min-width: 250px;
     min-height: 70px;
     position: relative;
-    right: 50px;
+    right: 30px;
     background-color: var(--verdigris);
     border-radius: 20px;
-    margin: 20px 50px 0px 50px;
+    margin: 20px 30px 0px 50px;
     padding-top: 10px;
     border: 2px solid var(--prussian-blue);
     font-size: 150%;
@@ -130,7 +130,7 @@ header h3:hover {
 #about-us {
     background-color: var(--cadet-gray);
     width: 60%;
-    margin: 100px;
+    margin: 90px;
     text-align: center;
     border-radius: 20px;
     font-family: 'Mochiy Pop P One', sans-serif;
@@ -145,13 +145,39 @@ header h3:hover {
 }
 
 #firstEL {
-    width: 50%;
+    justify-content: center;
+    width: 40%;
     background-color: var(--mint-cream);
 }
+#searchEL {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
 
-#secondEL {
+#searchEL input {
+    height: 75px;
+    width: 100%;
+    border-radius: 25px;
+    border: 3px solid var(--prussian-blue);
+    text-align: center;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    margin: 20px;
+}
+
+#thirdEL {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--mint-cream);
-    width: 50%;
+    width: 40%;
+    text-align: center;
+    font-family: 'Mochiy Pop P One', sans-serif;
+
 }
 
 
@@ -163,13 +189,14 @@ header h3:hover {
 }
 
 #carouselExampleIndicators {
+    background-color: var(--cadet-gray);
+    box-shadow: 0px 0px 15px 5px var(--prussian-blue);
     height: fit-content;
     width: 70%;
-    margin: 100px;
+    margin: 50px;
+    /* margin-left: 120px; */
     border-radius: 20px;
-    /* box-shadow: 0px 0px 15px 5px var(--prussian-blue); */
-    padding: 5px;
-    /* background-color: var(--cadet-gray); */
+    padding: 30px;
 }
 
 .carousel-inner h2{
@@ -188,12 +215,14 @@ header h3:hover {
     border-radius: 20px;
     opacity: 0.8;
     background-color: var(--mint-cream);
-    height: 30%;
+    height: fit-content;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    padding: 10px;
 }
 .carousel-caption > h3 {
     color: var(--walnut-brown);
     text-shadow: 2px 5px var(--cadet-gray);
-    font-size: 200%;
+    font-size: 100%;
 
 }
 
