@@ -168,6 +168,19 @@ header h3:hover {
     margin: 20px;
 }
 
+#searchEL button {
+    height: 50px;
+    width: 150px;
+    background-color: var(--verdigris);
+    border-radius: 20px;
+}
+
+#searchEL button:hover {
+    background-color: var(--cadet-gray);
+    border: 2px solid var(--walnut-brown);
+    box-shadow: 5px 5px 5px var(--prussian-blue);
+}
+
 #thirdEL {
     display: flex;
     flex-direction: column;
