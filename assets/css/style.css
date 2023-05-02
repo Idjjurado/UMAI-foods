@@ -248,8 +248,9 @@ header h3:hover {
 .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 500px;
-    width: 1000px;
+    width: 100%;
     background-color: var(--cadet-gray);
     text-align: center;
     border-radius: 25px;
@@ -265,6 +266,21 @@ header h3:hover {
 
 }
 
+.container button {
+    width: 20%;
+    background-color: var(--prussian-blue);
+    color: var(--mint-cream);
+    border: 2px solid var(--mint-cream);
+    border-radius: 10px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    padding: 3px;
+}
+
+.container button:hover {
+    background-color: var(--verdigris);
+    color: var(--prussian-blue);
+}
+
 #favorites {
     display: flex;
     align-items: end;
@@ -277,6 +293,7 @@ header h3:hover {
     background-color: var(--mint-cream);
     padding: 10px;
     margin: 10px;
+    border: 2px solid var(--prussian-blue);
     border-radius: 20px;
     box-shadow: 5px 5px 5px var(--walnut-brown);
     font-family: 'Mochiy Pop P One', sans-serif;
