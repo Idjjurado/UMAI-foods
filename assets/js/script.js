@@ -115,7 +115,7 @@ else {
 		recipeDiv.append(ingredientList)
 		for (let j = 0; j < ingredients.length; j++) {
 			const ing = $("<li>")
-			ing.text('test')
+			ing.text(ingredients[j].ingredName)
 			ingredientList.append(ing)
 		}
 	}
