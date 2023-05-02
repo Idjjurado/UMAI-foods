@@ -100,7 +100,8 @@ const animeIds = [
 	"40417",
 	"11741"
 ]
-
+let recipeSave = {}
+let recipeSaveButtonText = $("#saveRecipe").text()
 
 const settingsRandommeal = {
 	async: true,
@@ -119,15 +120,16 @@ const settingsRandommeal = {
 		
 		const recipeInfo = response.meals[0];
 		const addList = document.querySelector("#ingredients-list")
-		
+		console.log(recipeInfo);
 		$("#recipe-title").text(recipeInfo.strMeal);
 		$("#rrimage").attr("src", recipeInfo.strMealThumb);
 		$("#instruction-block").text(recipeInfo.strInstructions);
 		$("#recipe-video").attr(recipeInfo.strYoutube);
 
-
+		recipeSave ["recipeName"] = recipeInfo.strMeal
+		recipeSave ["ingredients"] = []
 		for (var i = 1; i < 20; i++) {
-			if (recipeInfo["strIngredient" + i].length > 0) {
+			if (recipeInfo["strIngredient" + i]) {
 				const ingredList = document.createElement("li");
 				const cookingMeasure = recipeInfo["strMeasure" + i];
 				const ingredName = recipeInfo["strIngredient" + i];
@@ -135,11 +137,30 @@ const settingsRandommeal = {
 				ingredList.textContent = cookingMeasure + " " + ingredName;
 				addList.appendChild(ingredList);
 
+				recipeSave.ingredients.push({"cookingMeasure":cookingMeasure, "ingredName":ingredName})
+
 				console.log(recipeInfo["strIngredient" + i].length > 0);
 			}
-		}
+		} console.log(recipeSave)
 
 	});
+
+		
+		$("#saveRecipe").click(function(){
+			if (recipeSaveButtonText === "recipe Saved!"){
+				return
+			}
+			let recipeSaveList = JSON.parse(localStorage.getItem("savedRecipes")) 
+			if (!recipeSaveList){
+				recipeSaveList = []
+			}
+			recipeSaveList.push(recipeSave)
+
+			localStorage.setItem("savedRecipes",JSON.stringify(recipeSaveList))
+			recipeSave = {};
+			$("#saveRecipe").text("recipe Saved!")
+		});
+
 
 	function sample(arr) {
 		const index = Math.floor(Math.random()*arr.length)
