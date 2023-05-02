@@ -1,37 +1,65 @@
-const settingsRandommeal = {
+const settings = {
 	async: true,
 	crossDomain: true,
-	url: 'https://themealdb.p.rapidapi.com/random.php',
+	url: 'https://themealdb.p.rapidapi.com/search.php?',
 	method: 'GET',
 	headers: {
-		'content-type': 'application/json',
-		'X-RapidAPI-Key': 'fb86f9c2b8mshf93f18832749770p146adajsn70f18f6fb0ba',
+		'X-RapidAPI-Key': '8fba490658msh30c9e8c9a48dc6bp15f465jsnfa24de2a900b',
 		'X-RapidAPI-Host': 'themealdb.p.rapidapi.com'
 	}
 };
 
-$.ajax(settingsRandommeal).done(function (response) {
+$.ajax(settings).done(function (response) {
 	console.log(response);
-	
-	const recipeInfo = response.meals[0];
-	const addList = document.querySelector("#ingredients-list")
-	
-	$("#recipe-title").text(recipeInfo.strMeal);
-	$("#rrimage").attr("src", recipeInfo.strMealThumb);
-	$("#instruction-block").text(recipeInfo.strInstructions);
-
-
-	for (var i = 1; i < 20; i++) {
-		if (recipeInfo["strIngredient" + i].length > 0) {
-			const ingredList = document.createElement("li");
-			const cookingMeasure = recipeInfo["strMeasure" + i];
-			const ingredName = recipeInfo["strIngredient" + i];
-
-			ingredList.textContent = cookingMeasure + " " + ingredName;
-			addList.appendChild(ingredList);
-
-			console.log(recipeInfo["strIngredient" + i].length > 0);
-		}
-	}
-
 });
+
+//check if it exists and rewrite the variable
+let userQuery = (localStorage.getItem('userQuery')) ? 
+                    JSON.parse(localStorage.getItem('userQuery')) : 
+                           { "s" : ""};
+
+//save user query
+localStorage.setItem('userQuery', JSON.stringify(userQuery));
+
+
+function buildQuery(){
+    var query = [];
+    for (var key in userQuery) {
+        query.push(encodeURIComponent(key) + '=' + encodeURIComponent(userQuery[key]));
+    }
+    let new_url = "https://themealdb.p.rapidapi.com/search.php"+ (query.length ? '?' + query.join('&') : '');
+    return(new_url);
+}
+
+let searchTxt;
+document.querySelector("#input-recipe").addEventListener('change', function(){
+    if(searchTxt !== this.value){
+        searchTxt = this.value;
+        userQuery["s"] =searchTxt;
+        let url = buildQuery();
+        localStorage.setItem("recipeURL", url);
+    }
+})
+
+function doQuery(url, userQuery){
+    let res = new URL(url);
+    if(Object.keys(userQuery).length !== 0){
+        let ind = 0;
+        while (ind < Object.keys(userQuery).length){
+            const param = Object.keys(userQuery)[ind];
+            const value = userQuery[param];  
+            res.searchParams.set(param, value);
+            ind++;
+        }
+    }
+    return ( res.href );
+}
+
+const userRecipe = {
+    s : ""
+}
+//store url
+let url = doQuery('https://themealdb.p.rapidapi.com/search.php', userRecipe);
+//send to the browser
+console.log(url);
+console.log(localStorage);

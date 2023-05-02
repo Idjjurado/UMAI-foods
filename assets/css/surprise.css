@@ -1,0 +1,195 @@
+:root {
+    --night: #111212ff;
+    --dark-purple: rgb(48, 20, 66);
+    --school-bus-yellow: rgb(240, 223, 112);
+    --brunswick-green: #16554bff;
+    --snow: #f4f0f2ff;
+    }
+    
+/* * {
+    border: 2px solid black;
+} */
+
+main {
+   background-color: var(--school-bus-yellow);
+}
+  
+header {
+    background-color: var(--brunswick-green);
+    position: sticky;
+    top: 0;
+}
+
+header h3 {
+    content-visibility: hidden;
+    text-align: center;
+    padding-top: 25px;
+    height: 75px;
+    width: 200px;
+}
+
+header h3:hover {
+    content-visibility: visible;
+    color: var(--snow);
+}
+  
+.navbar {
+    box-shadow: 0px 15px 20px -10px var(--night);
+    padding: 20px;
+}
+
+#headerTitle {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--brunswick-green);
+    padding: 10px;
+}
+
+#headerTitle a {
+background-color: var(--brunswick-green);
+border-radius: 20px;
+padding: 20px;
+}
+
+    .navbar {
+        background-color: var(--brunswick-green);
+        display: flex;
+    }
+
+    .hover-text {
+        display: none;
+    }
+
+    .three:hover {
+        width: 300px;
+        height: 80px;
+        position: relative;
+        right: 50px;
+    }
+
+    .nav-item img:hover {
+        display: none;
+    }
+    
+    .nav-item img:hover + .hover-text {
+        display: inline;
+        font-size: 30px;
+        padding: 0;
+        border-radius: 10px;
+        font-family: 'Mochiy Pop P One', sans-serif;
+        color: var(--night);
+    }
+    
+    
+    .nav-item:hover + .nav-item img:hover {
+        display: none;
+    }
+    
+    .nav-link {
+        text-align: center;
+        width: 200px;
+        height: fit-content;
+        position: relative;
+        background-color: var(--dark-purple);
+        border-radius: 20px;
+        margin: 20px 100px 0px 100px;
+        border: 2px solid var(--snow);
+        font-size: 150%;
+    }
+    
+    .nav-link:hover {
+        cursor: pointer;
+        background-color: var(--snow);
+        border: 2px solid var(--snow);
+    }
+
+  
+    
+    
+    #ul {
+        list-style: none;
+        display: inline-block;
+    }
+    
+    #ul li {
+        float: left;
+        margin: 0 20px;
+    }
+    
+    #rrimage {
+        width: 75%;
+        margin: 20px;
+        border: 2px solid var(--dark-purple);
+        border-radius: 25px;
+    }
+    
+    .card-style {
+        background-color: var(--brunswick-green);
+        font-family: 'Mochiy Pop P One', sans-serif;
+        color: rgb(221, 218, 213);
+        /* border: 2px solid black; */
+        border-radius: 25px;
+        margin: 25px;
+        margin-top: 50px;
+        box-shadow: 0px 0px 15px 5px var(--night);
+        text-align: center;
+        height: 95%;
+        padding: 20px;
+    }
+    
+    .card-style h3 {
+        margin-top: 20px;
+        font-size: 40px;
+    }
+    
+    .card-style a {
+        color: var(--snow);
+        padding: 10px;
+        border-radius: 10px;
+        background-color: var(--dark-purple);
+    }
+    
+    .card-style a:hover {
+        color: rgb(165, 0, 0);
+        padding: 10px;
+        border-radius: 10px;
+        background-color: var(--school-bus-yellow);
+        box-shadow: 5px 5px 5px var(--night);
+    }
+
+
+.wrapper {
+    display: flex;
+}
+
+#surprise-recipe {
+    width: 40%;
+}
+
+#middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+    height: 100%;
+    width: 20%;
+    
+}
+
+#middle h3 {
+    margin-bottom: 75px;
+}
+
+#surprise-anime {
+    width: 40%;
+    height: fit-content;
+}
+
+#reload:hover {
+    cursor: pointer;
+    background-color: var(--dark-purple);
+    box-shadow: 0px 0px 15px 5px var(--dark-purple);
+
+}
