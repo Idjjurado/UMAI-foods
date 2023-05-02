@@ -31,10 +31,10 @@ header {
     min-width: 250px;
     min-height: 70px;
     position: relative;
-    right: 50px;
+    right: 30px;
     background-color: var(--verdigris);
     border-radius: 20px;
-    margin: 20px 50px 0px 50px;
+    margin: 20px 30px 0px 50px;
     padding-top: 10px;
     border: 2px solid var(--prussian-blue);
     font-size: 150%;
@@ -55,9 +55,7 @@ header {
     height: 35px;
 }
 
-#mainEL {
-    background-color: var(--mint-cream);
-}
+
 
 .navbar {
     box-shadow: 0px 15px 20px -10px var(--prussian-blue);
@@ -122,25 +120,77 @@ header h3:hover {
     display: none;
 }
 
+#mainEL {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--mint-cream);
+}
+
 
 #about-us {
     background-color: var(--cadet-gray);
-    width: 30%;
-    margin: 100px;
+    width: 60%;
+    margin: 90px;
     text-align: center;
-    /* border: 5px solid var(--prussian-blue); */
     border-radius: 20px;
     font-family: 'Mochiy Pop P One', sans-serif;
     box-shadow: 0px 0px 15px 5px var(--prussian-blue);
-
+    padding: 20px;
 }
 
 #about-us h3 {
     font-size: 40px;
     margin-top: 20px;
-    font-family: 'Varela Round', sans-serif;
-    /* font-family: 'Indie Flower', cursive; */
-    /* font-family: 'Sedgwick Ave Display', cursive; */
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+#firstEL {
+    justify-content: center;
+    width: 40%;
+    background-color: var(--mint-cream);
+}
+#searchEL {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+#searchEL input {
+    height: 75px;
+    width: 100%;
+    border-radius: 25px;
+    border: 3px solid var(--prussian-blue);
+    text-align: center;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    margin: 20px;
+}
+
+#searchEL button {
+    height: 50px;
+    width: 150px;
+    background-color: var(--verdigris);
+    border-radius: 20px;
+}
+
+#searchEL button:hover {
+    background-color: var(--cadet-gray);
+    border: 2px solid var(--walnut-brown);
+    box-shadow: 5px 5px 5px var(--prussian-blue);
+}
+
+#thirdEL {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mint-cream);
+    width: 40%;
+    text-align: center;
+    font-family: 'Mochiy Pop P One', sans-serif;
+
 }
 
 
@@ -152,28 +202,25 @@ header h3:hover {
 }
 
 #carouselExampleIndicators {
-    height: 35%;
-    width: 35%;
-    left: 50%;
-    bottom: 650px;
-    /* border: 5px solid var(--prussian-blue); */
-    border-radius: 20px;
-    /* box-shadow: 5px 5px 5px 5px var(--prussian-blue); */
+    background-color: var(--cadet-gray);
     box-shadow: 0px 0px 15px 5px var(--prussian-blue);
-    padding: 5px;
-    background-color: var(--cadet-gray); 
+    height: fit-content;
+    width: 70%;
+    margin: 50px;
+    /* margin-left: 120px; */
+    border-radius: 20px;
+    padding: 30px;
 }
 
 .carousel-inner h2{
     text-align: center;
-    font-family: 'Varela Round', sans-serif;
     padding-bottom:  20px;
+    font-family: 'Mochiy Pop P One', sans-serif;
 }
 
 .carousel-inner img {
     border-radius: 20px;
     border: 5px solid var(--prussian-blue);
-    /* box-shadow: 5px 5px 5px var(--prussian-blue); */
 }
 
 .carousel-caption {
@@ -181,15 +228,66 @@ header h3:hover {
     border-radius: 20px;
     opacity: 0.8;
     background-color: var(--mint-cream);
-    height: 30%;
+    height: fit-content;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    padding: 10px;
 }
 .carousel-caption > h3 {
     color: var(--walnut-brown);
     text-shadow: 2px 5px var(--cadet-gray);
-    font-size: 200%;
+    font-size: 100%;
 
 }
 
 .carousel-caption > p {
     color: var(--walnut-brown);
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 1000px;
+    background-color: var(--cadet-gray);
+    text-align: center;
+    border-radius: 25px;
+    border: 5px solid var(--prussian-blue);
+
+}
+
+.container h3 {
+    height: 10%;
+    width: 100%;
+    padding-top: 7px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+
+}
+
+#favorites {
+    display: flex;
+    align-items: end;
+    background-color: var(--cadet-gray);
+    height: 90%;
+    width: 100%;
+}
+
+#favorites div {
+    background-color: var(--mint-cream);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px var(--walnut-brown);
+    font-family: 'Mochiy Pop P One', sans-serif;
+    height: 95%;
+}
+
+footer {
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    padding-top: 75px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+
+}
+
+

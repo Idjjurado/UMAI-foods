@@ -1,7 +1,7 @@
 :root {
     --night: #111212ff;
     --dark-purple: rgb(48, 20, 66);
-    --school-bus-yellow: rgb(235, 213, 74);
+    --school-bus-yellow: rgb(240, 223, 112);
     --brunswick-green: #16554bff;
     --snow: #f4f0f2ff;
     }
@@ -39,25 +39,6 @@ border-radius: 20px;
 padding: 20px;
 }
 
-/* .nav-item {
-    height: fit-content;
-    width: fit-content;
-    text-align: center;
-    min-width: 250px;
-    min-height: 50px;
-    position: relative;
-    right: 80px;
-    background-color: var(--verdigris);
-    border-radius: 20px;
-    margin: 20px 50px 0px 50px;
-    padding: 0px;
-    border: 2px solid var(--ghost-white);
-    font-size: 150%;
-} */
-
-   
-   
-    
     .navbar {
         background-color: var(--brunswick-green);
         display: flex;
@@ -132,16 +113,15 @@ padding: 20px;
     
     .card-style {
         background-color: var(--brunswick-green);
-        font-family: 'Maven Pro', sans-serif;
+        font-family: 'Mochiy Pop P One', sans-serif;
         color: rgb(221, 218, 213);
         /* border: 2px solid black; */
         border-radius: 25px;
-        margin: 15px;
+        margin: 25px;
         margin-top: 50px;
         box-shadow: 0px 0px 15px 5px var(--night);
         text-align: center;
-        width: 33%;
-        height: 100%;
+        height: 95%;
         padding: 20px;
     }
     
@@ -158,9 +138,45 @@ padding: 20px;
     }
     
     .card-style a:hover {
-        color: black;
+        color: rgb(165, 0, 0);
         padding: 10px;
         border-radius: 10px;
         background-color: var(--school-bus-yellow);
         box-shadow: 5px 5px 5px var(--night);
     }
+
+
+.wrapper {
+    display: flex;
+}
+
+#surprise-recipe {
+    width: 40%;
+}
+
+#middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+    height: 100%;
+    width: 20%;
+    
+}
+
+#middle h3 {
+    margin-bottom: 75px;
+}
+
+#surprise-anime {
+    width: 40%;
+    height: fit-content;
+}
+
+#reload:hover {
+    cursor: pointer;
+    background-color: var(--dark-purple);
+    box-shadow: 0px 0px 15px 5px var(--dark-purple);
+
+}

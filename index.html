@@ -79,7 +79,8 @@
         </section>
       </nav>
   </header>
-    <div id="mainEL">
+  <div id="mainEL">
+    <div id="firstEL">
       <aside id="about-us">
         <h3>Itadakimasu!</h3>
         <img id="BBimage" src="./assets/images/Food Banner.jpg" alt="feast with caption lets eat">
@@ -87,10 +88,24 @@
            and other tv shows. Can have a place to find some of the amazing <br>
            dishes that can be found. Here at Umai Foods, we have <br>
            options to have a random recipe pulled and to generate a search. <br>
-           Based on a type of food be it spicy, sweet, or sour.   </p>
+           Based on a type of food be it spicy, sweet, or umami.   </p>
       </aside>
+    </div>
+
+    <div  id="searchEL">
+      <h3>Know what you want?</h3>
+      <p>Search by recipe or ingredient below!</p>
+      <input type="textbox" placeholder="What are you hungry for?">
+      <button>Search!</button>
+    </div>
 
   <!-- Carosousel Body -->
+  <section id="thirdEL">
+    <div>
+      <h3>Not sure yet?</h3>
+      <p>Check out some of our favorite recipes below!</p>
+      <h3>😋😋😋</h3>
+    </div>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -98,7 +113,7 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-          <h2>Featured Recipes: 😋</h2>
+          <!-- <h2>Featured Recipes: 😋</h2> -->
           <div class="carousel-item active">
             <img class="d-block w-100" src="/assets/images/breakfast.png" alt="First slide">
           <div class="carousel-caption d-none d-md-block">
@@ -128,14 +143,22 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
-        </div>
+      </section>
+      </div>
+    
 
-    <div class="container" id="favorites">
-      <h3>Favorites</h3>
+    <div class="container">
+      <h3>My Saved Recipes</h3>
+      <div id="favorites">
+        <div>Recipe Title</div>
+        <div>Recipe Title</div>
+      </div>
     </div>
 
+    
+
       <footer>
-        <section id="hero">
+        <section>
               <p>Created by group 8</p>
         </section>
       </footer>
