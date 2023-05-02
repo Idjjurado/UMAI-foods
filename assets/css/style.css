@@ -194,6 +194,10 @@ header h3:hover {
 
 }
 
+#bottom {
+    height: 550px;
+}
+
 
 #BBimage {
     width: 75%;
@@ -249,7 +253,7 @@ header h3:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 500px;
+    height: 100%;
     width: 100%;
     background-color: var(--cadet-gray);
     text-align: center;
@@ -283,10 +287,10 @@ header h3:hover {
 
 #favorites {
     display: flex;
-    align-items: end;
     background-color: var(--cadet-gray);
     height: 90%;
     width: 100%;
+    max-height: fit-content;
 }
 
 #favorites div {
@@ -297,8 +301,10 @@ header h3:hover {
     border-radius: 20px;
     box-shadow: 5px 5px 5px var(--walnut-brown);
     font-family: 'Mochiy Pop P One', sans-serif;
-    height: 95%;
+    align-items: center;
+    width: 20%;
 }
+
 
 footer {
     height: 150px;
