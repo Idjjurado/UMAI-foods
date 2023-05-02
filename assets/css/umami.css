@@ -19,6 +19,18 @@
         position: sticky;
         top: 0;
     }
+
+    header h3 {
+        content-visibility: hidden;
+        text-align: center;
+        padding-top: 25px;
+        height: 75px;
+        width: 200px;
+    }
+    
+    header h3:hover {
+        content-visibility: visible;
+    }
       
     .navbar {
         box-shadow: 0px 15px 20px -10px var(--indigo-dye);
@@ -27,7 +39,7 @@
     
     #headerTitle {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         background-color: var(--coral);
         padding: 10px;
@@ -39,25 +51,6 @@
     padding: 20px;
     }
     
-    /* .nav-item {
-        height: fit-content;
-        width: fit-content;
-        text-align: center;
-        min-width: 250px;
-        min-height: 50px;
-        position: relative;
-        right: 80px;
-        background-color: var(--verdigris);
-        border-radius: 20px;
-        margin: 20px 50px 0px 50px;
-        padding: 0px;
-        border: 2px solid var(--ghost-white);
-        font-size: 150%;
-    } */
-    
-       
-       
-        
         .navbar {
             background-color: var(--coral);
             display: flex;
@@ -132,9 +125,8 @@
         
         .card-style {
             background-color: var(--coral);
-            font-family: 'Maven Pro', sans-serif;
+            font-family: 'Mochiy Pop P One', sans-serif;
             color: rgb(221, 218, 213);
-            /* border: 2px solid black; */
             border-radius: 25px;
             margin: 15px;
             margin-top: 50px;
