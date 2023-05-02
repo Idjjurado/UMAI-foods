@@ -100,6 +100,28 @@ const animeIds = [
 	"40417",
 	"11741"
 ]
+const savedRecipes = JSON.parse(localStorage.getItem("savedRecipes"))
+if (!savedRecipes){
+	$("#favorites").text("There are no recipes saved.")
+}
+else {
+	console.log(savedRecipes)
+	for (let i = 0; i < savedRecipes.length; i++){
+		let recipeDiv = $("<div>")
+		recipeDiv.append($("<p>").text(savedRecipes[i].recipeName))
+		$("#favorites").append(recipeDiv)
+		const ingredients = savedRecipes[i].ingredients
+		let ingredientList = $("<ul>")
+		recipeDiv.append(ingredientList)
+		for (let j = 0; j < ingredients.length; j++) {
+			const ing = $("<li>")
+			ing.text('test')
+			ingredientList.append(ing)
+		}
+	}
+	$("#favorites")
+
+}
 
 // THIS IS FOR THE SWEETS PAGE
 const settingsDessert = {
