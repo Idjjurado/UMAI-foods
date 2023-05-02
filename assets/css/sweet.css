@@ -38,25 +38,6 @@ background-color: var(--fluorescent-cyan);
 border-radius: 20px;
 padding: 20px;
 }
-
-/* .nav-item {
-    height: fit-content;
-    width: fit-content;
-    text-align: center;
-    min-width: 250px;
-    min-height: 50px;
-    position: relative;
-    right: 80px;
-    background-color: var(--verdigris);
-    border-radius: 20px;
-    margin: 20px 50px 0px 50px;
-    padding: 0px;
-    border: 2px solid var(--ghost-white);
-    font-size: 150%;
-} */
-
-   
-   
     
     .navbar {
         background-color: var(--dark-purple);
@@ -140,7 +121,6 @@ padding: 20px;
         margin-top: 50px;
         box-shadow: 0px 0px 15px 5px var(--dark-purple);
         text-align: center;
-        width: 20%;
         height: 100%;
         padding: 20px;
     }
