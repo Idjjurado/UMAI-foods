@@ -312,6 +312,12 @@ header h3:hover {
     width: 20%;
 }
 
+#favorites ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 footer {
     height: 150px;
