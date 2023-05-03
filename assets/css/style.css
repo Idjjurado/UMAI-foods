@@ -16,13 +16,37 @@ body {
 
 header {
     background-color: var(--cadet-gray);
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 1;
 }
 
-.navbar-nav {
-    width: 100%;
+ul {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+header h3 {
+    content-visibility: hidden;
+    text-align: center;
+    padding-top: 25px;
+    height: 75px;
+    width: 200px;
+}
+
+header h3:hover {
+    content-visibility: visible;
+}
+
+#headerTitle {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--cadet-gray);
+    padding: 10px;
 }
 
 .nav-item {
@@ -63,25 +87,7 @@ header {
     padding: 20px;
 }
 
-header h3 {
-    content-visibility: hidden;
-    text-align: center;
-    padding-top: 25px;
-    height: 75px;
-    width: 200px;
-}
 
-header h3:hover {
-    content-visibility: visible;
-}
-
-#headerTitle {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: var(--cadet-gray);
-    padding: 10px;
-}
 
 .navbar {
     background-color: var(--cadet-gray);
@@ -123,6 +129,7 @@ header h3:hover {
 
 #mainEL {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     background-color: var(--mint-cream);
 }
@@ -315,4 +322,70 @@ footer {
 
 }
 
+
+@media only screen and (max-width: 1879px) {
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (max-width: 1520px) {
+    
+    #headerTitle span {
+        display: none;
+    }
+
+    #mainEL {
+        flex-direction: column;
+    }
+
+    #firstEL {
+        width: 100%;
+        margin-left: 150px;
+    }
+    #searchEL {
+        width: 50%;
+        margin-left: 350px;
+        margin-bottom: 100px;
+    }
+    #thirdEL {
+        width: 100%;
+    }
+
+    #bottom {
+        margin-top: 50px;
+    }
+
+} 
+
+@media only screen and (max-width: 991px) {
+
+    #headerTitle img {
+        display: none;
+    }
+
+    #headerTitle a::after {
+        content: "Umai Foods";
+        font-size: 50px;
+        font-family: 'Mochiy Pop P One', sans-serif;
+        color: var(--prussian-blue);
+
+    }
+    #searchEL {
+        width: 50%;
+        margin-left: 150px;
+        /* margin-right: 400px; */
+        margin-bottom: 100px;
+    }
+
+    #firstEL {
+        margin-left: 0px;
+    }
+    
+    
+}
 

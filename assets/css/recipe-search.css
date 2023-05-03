@@ -133,8 +133,9 @@
             box-shadow: 0px 0px 15px 5px var(--persian-red);
             text-align: center;
             height: 100%;
-            width: 20%;
+            /* width: 20%; */
             padding: 20px;
+            flex: 17%;
         }
         
         .card-style h3 {
@@ -155,4 +156,48 @@
             border-radius: 10px;
             background-color: var(--citrine);
             box-shadow: 5px 5px 5px var(--citrine);
+        }
+
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @media only screen and (max-width: 1635px) {
+
+            li.nav-item {
+                width: 100px;
+                margin: 20px;
+                margin-right: 150px;
+            }
+        
+        }
+        
+
+        @media only screen and (max-width: 1240px) {
+            
+            #headerTitle span {
+                display: none;
+            }
+        
+            li.nav-item {
+                width: 30px;
+                margin: 20px;
+                margin-right: 150px;
+            }
+        
+        } 
+        
+        @media only screen and (max-width: 992px) {
+            #headerTitle {
+                display: none;
+            }
+        
+            li.nav-item {
+                width: 100%;
+                margin: 0px;
+                margin-right: 0px;
+            }
+            
         }

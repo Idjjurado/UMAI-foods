@@ -34,6 +34,8 @@ header h3:hover {
 }
   
 .navbar {
+    display: flex;
+    align-items: center;
     box-shadow: 0px 15px 20px -10px var(--dark-purple);
     padding: 20px;
 }
@@ -54,8 +56,14 @@ padding: 20px;
     
     .navbar {
         background-color: var(--dark-purple);
-        display: flex;
     }
+
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
 
     .hover-text {
         display: none;
@@ -130,11 +138,13 @@ padding: 20px;
         color: rgb(221, 218, 213);
         border-radius: 25px;
         margin: 15px;
+        margin-left: 25px;
         margin-top: 50px;
         box-shadow: 0px 0px 15px 5px var(--dark-purple);
         text-align: center;
         height: 100%;
-        padding: 20px;
+        padding: 15px;
+        flex: 17%;
     }
     
     .card-style h3 {
@@ -147,6 +157,7 @@ padding: 20px;
         padding: 10px;
         border-radius: 10px;
         background-color: var(--dark-purple);
+        width: 60%;
     }
     
     .card-style a:hover {
@@ -156,4 +167,40 @@ padding: 20px;
         background-color: var(--fluorescent-cyan);
         box-shadow: 5px 5px 5px var(--dark-purple);
     }
+
+
+
+
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+@media only screen and (max-width: 1240px) {
     
+    #headerTitle span {
+        display: none;
+    }
+
+    li.nav-item {
+        width: 100px;
+        margin: 20px;
+        margin-right: 150px;
+    }
+
+} 
+
+@media only screen and (max-width: 1000px) {
+    #headerTitle {
+        display: none;
+    }
+
+    li.nav-item {
+        width: 100%;
+        margin: 0px;
+        margin-right: 0px;
+    }
+    
+}

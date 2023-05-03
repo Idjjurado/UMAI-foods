@@ -135,6 +135,7 @@
             text-align: center;
             height: 100%;
             padding: 20px;
+            flex: 17%;
         }
         
         .card-style h3 {
@@ -191,4 +192,37 @@
     background-color: var(--dark-purple);
     box-shadow: 0px 0px 15px 5px var(--dark-purple);
 
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+@media only screen and (max-width: 1240px) {
+    
+    #headerTitle span {
+        display: none;
+    }
+
+    li.nav-item {
+        width: 100px;
+        margin: 20px;
+        margin-right: 150px;
+    }
+
+} 
+
+@media only screen and (max-width: 1000px) {
+    #headerTitle {
+        display: none;
+    }
+
+    li.nav-item {
+        width: 100%;
+        margin: 0px;
+        margin-right: 0px;
+    }
+    
 }
