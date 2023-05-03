@@ -295,7 +295,7 @@ header h3:hover {
 #favorites {
     display: flex;
     background-color: var(--cadet-gray);
-    height: 90%;
+    height: 80%;
     width: 100%;
     max-height: fit-content;
 }
