@@ -14,6 +14,9 @@ body {
     background-color: var(--mint-cream);
 }
 
+
+/* This is all header stuff */
+
 header {
     background-color: var(--cadet-gray);
     width: 100%;
@@ -24,9 +27,6 @@ header {
 
 ul {
     display: flex;
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
-    /* align-items: center; */
 }
 
 header h3 {
@@ -48,6 +48,9 @@ header h3:hover {
     background-color: var(--cadet-gray);
     padding: 10px;
 }
+
+
+/* This is all of the buttons in the header */
 
 .nav-item {
     height: fit-content;
@@ -80,14 +83,10 @@ header h3:hover {
     height: 35px;
 }
 
-
-
 .navbar {
     box-shadow: 0px 15px 20px -10px var(--prussian-blue);
     padding: 20px;
 }
-
-
 
 .navbar {
     background-color: var(--cadet-gray);
@@ -127,6 +126,9 @@ header h3:hover {
     display: none;
 }
 
+
+/* Main page elements */
+
 #mainEL {
     display: flex;
     flex-wrap: wrap;
@@ -146,6 +148,13 @@ header h3:hover {
     padding: 20px;
 }
 
+#aboutImage {
+    width: 75%;
+    margin: 20px;
+    border: 2px solid var(--prussian-blue);
+    border-radius: 20px;
+}
+
 #about-us h3 {
     font-size: 40px;
     margin-top: 20px;
@@ -157,6 +166,7 @@ header h3:hover {
     width: 35%;
     background-color: var(--mint-cream);
 }
+
 #searchEL {
     display: flex;
     flex-direction: column;
@@ -198,20 +208,13 @@ header h3:hover {
     width: 40%;
     text-align: center;
     font-family: 'Mochiy Pop P One', sans-serif;
-
 }
 
 #bottom {
     height: 550px;
 }
 
-
-#BBimage {
-    width: 75%;
-    margin: 20px;
-    border: 2px solid var(--prussian-blue);
-    border-radius: 20px;
-}
+/* This is all the carousel stuff */
 
 #carouselExampleIndicators {
     background-color: var(--cadet-gray);
@@ -256,6 +259,8 @@ header h3:hover {
     color: var(--walnut-brown);
 }
 
+
+/* This is the saved recipes container stuff */
 .container {
     display: flex;
     flex-direction: column;
@@ -266,7 +271,6 @@ header h3:hover {
     text-align: center;
     border-radius: 25px;
     border: 5px solid var(--prussian-blue);
-
 }
 
 .container h3 {
@@ -274,7 +278,6 @@ header h3:hover {
     width: 100%;
     padding-top: 7px;
     font-family: 'Mochiy Pop P One', sans-serif;
-
 }
 
 .container button {
@@ -330,13 +333,11 @@ footer {
 
 
 @media only screen and (max-width: 1879px) {
-
     ul {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
     }
-
 }
 
 @media only screen and (max-width: 1520px) {
@@ -365,7 +366,6 @@ footer {
     #bottom {
         margin-top: 50px;
     }
-
 } 
 
 @media only screen and (max-width: 991px) {
@@ -390,8 +390,5 @@ footer {
 
     #firstEL {
         margin-left: 0px;
-    }
-    
-    
+    } 
 }
-
