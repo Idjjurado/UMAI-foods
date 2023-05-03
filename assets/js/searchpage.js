@@ -1,4 +1,6 @@
 var localRecipe = localStorage.getItem("recipeURL")
+// let recipeSave = {}
+// let recipeSaveButtonText = $("#saveRecipe").text()
 
 const settingsSearchmeal = {
 	async: true,
@@ -32,11 +34,32 @@ $.ajax(settingsSearchmeal).done(function (response) {
             ingredList.textContent = cookingMeasure + " " + ingredName;
             addList.appendChild(ingredList);
 
+            // recipeSave.ingredients.push({"cookingMeasure":cookingMeasure, "ingredName":ingredName})
+
             console.log(recipeInfo["strIngredient" + i].length > 0);
         }
-    }
+    }		// console.log(recipeSave)
+
 
 });
+
+
+// $("#saveRecipe").click(function(){
+//     if (recipeSaveButtonText === "recipe Saved!"){
+//         return
+//     }
+//     let recipeSaveList = JSON.parse(localStorage.getItem("savedRecipes")) 
+//     if (!recipeSaveList){
+//         recipeSaveList = []
+//     }
+//     recipeSaveList.push(recipeSave)
+
+//     localStorage.setItem("savedRecipes",JSON.stringify(recipeSaveList))
+//     recipeSave = {};
+//     $("#saveRecipe").text("recipe Saved!")
+// });
+
+
 
 // This would be to create elements on the page
 // function getApi() {

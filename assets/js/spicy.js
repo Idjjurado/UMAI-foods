@@ -147,6 +147,7 @@ $.ajax(settingsSpicy).done(function (response) {
 
 });
 
+		//upon clicking an 'a' element, create the Recipe with the elements of name, ingredients, and ingredient ammount
 $("#saveRecipe").click(function(){
 	if (recipeSaveButtonText === "recipe Saved!"){
 		return
