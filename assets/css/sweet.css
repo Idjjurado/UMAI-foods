@@ -32,6 +32,7 @@ header h3:hover {
     content-visibility: visible;
     color: var(--ghost-white);
 }
+
   
 .navbar {
     display: flex;
@@ -48,11 +49,19 @@ header h3:hover {
     padding: 10px;
 }
 
-#headerTitle a {
+#secret {
+    text-decoration: none;
+}
+
+
+
+#showTitle{
 background-color: var(--fluorescent-cyan);
 border-radius: 20px;
 padding: 20px;
 }
+
+
     
     .navbar {
         background-color: var(--dark-purple);
