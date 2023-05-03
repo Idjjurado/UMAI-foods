@@ -136,6 +136,7 @@ padding: 20px;
         text-align: center;
         height: 95%;
         padding: 20px;
+        flex: 17%;
     }
     
     .card-style h3 {
@@ -159,9 +160,7 @@ padding: 20px;
     }
 
 
-.wrapper {
-    display: flex;
-}
+
 
 #surprise-recipe {
     width: 40%;
@@ -192,4 +191,61 @@ padding: 20px;
     background-color: var(--dark-purple);
     box-shadow: 0px 0px 15px 5px var(--dark-purple);
 
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+@media only screen and (max-width: 1635px) {
+
+    li.nav-item {
+        width: 100px;
+        margin: 20px;
+        margin-right: 150px;
+    }
+
+}
+
+
+@media only screen and (max-width: 1240px) {
+    
+    #headerTitle span {
+        display: none;
+    }
+
+    li.nav-item {
+        width: 30px;
+        margin: 20px;
+        margin-right: 150px;
+    }
+
+    #middle {
+        display: none;
+    }
+
+    #surprise-recipe {
+        width: 50%;
+    }
+
+    #surprise-anime {
+        width: 50%;
+    }
+ 
+
+} 
+
+@media only screen and (max-width: 992px) {
+    #headerTitle {
+        display: none;
+    }
+
+    li.nav-item {
+        width: 100%;
+        margin: 0px;
+        margin-right: 0px;
+    }
+    
 }

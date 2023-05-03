@@ -16,13 +16,37 @@ body {
 
 header {
     background-color: var(--cadet-gray);
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 1;
 }
 
-.navbar-nav {
-    width: 100%;
+ul {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+header h3 {
+    content-visibility: hidden;
+    text-align: center;
+    padding-top: 25px;
+    height: 75px;
+    width: 200px;
+}
+
+header h3:hover {
+    content-visibility: visible;
+}
+
+#headerTitle {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--cadet-gray);
+    padding: 10px;
 }
 
 .nav-item {
@@ -63,25 +87,7 @@ header {
     padding: 20px;
 }
 
-header h3 {
-    content-visibility: hidden;
-    text-align: center;
-    padding-top: 25px;
-    height: 75px;
-    width: 200px;
-}
 
-header h3:hover {
-    content-visibility: visible;
-}
-
-#headerTitle {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: var(--cadet-gray);
-    padding: 10px;
-}
 
 .navbar {
     background-color: var(--cadet-gray);
@@ -123,6 +129,7 @@ header h3:hover {
 
 #mainEL {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     background-color: var(--mint-cream);
 }
@@ -147,7 +154,7 @@ header h3:hover {
 
 #firstEL {
     justify-content: center;
-    width: 40%;
+    width: 35%;
     background-color: var(--mint-cream);
 }
 #searchEL {
@@ -155,7 +162,7 @@ header h3:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20%;
+    width: 25%;
     font-family: 'Mochiy Pop P One', sans-serif;
 }
 
@@ -192,6 +199,10 @@ header h3:hover {
     text-align: center;
     font-family: 'Mochiy Pop P One', sans-serif;
 
+}
+
+#bottom {
+    height: 550px;
 }
 
 
@@ -248,8 +259,9 @@ header h3:hover {
 .container {
     display: flex;
     flex-direction: column;
-    height: 500px;
-    width: 1000px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     background-color: var(--cadet-gray);
     text-align: center;
     border-radius: 25px;
@@ -265,23 +277,41 @@ header h3:hover {
 
 }
 
+.container button {
+    width: 20%;
+    background-color: var(--prussian-blue);
+    color: var(--mint-cream);
+    border: 2px solid var(--mint-cream);
+    border-radius: 10px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    padding: 3px;
+}
+
+.container button:hover {
+    background-color: var(--verdigris);
+    color: var(--prussian-blue);
+}
+
 #favorites {
     display: flex;
-    align-items: end;
     background-color: var(--cadet-gray);
     height: 90%;
     width: 100%;
+    max-height: fit-content;
 }
 
 #favorites div {
     background-color: var(--mint-cream);
     padding: 10px;
     margin: 10px;
+    border: 2px solid var(--prussian-blue);
     border-radius: 20px;
     box-shadow: 5px 5px 5px var(--walnut-brown);
     font-family: 'Mochiy Pop P One', sans-serif;
-    height: 95%;
+    align-items: center;
+    width: 20%;
 }
+
 
 footer {
     height: 150px;
@@ -292,4 +322,70 @@ footer {
 
 }
 
+
+@media only screen and (max-width: 1879px) {
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (max-width: 1520px) {
+    
+    #headerTitle span {
+        display: none;
+    }
+
+    #mainEL {
+        flex-direction: column;
+    }
+
+    #firstEL {
+        width: 100%;
+        margin-left: 150px;
+    }
+    #searchEL {
+        width: 50%;
+        margin-left: 350px;
+        margin-bottom: 100px;
+    }
+    #thirdEL {
+        width: 100%;
+    }
+
+    #bottom {
+        margin-top: 50px;
+    }
+
+} 
+
+@media only screen and (max-width: 991px) {
+
+    #headerTitle img {
+        display: none;
+    }
+
+    #headerTitle a::after {
+        content: "Umai Foods";
+        font-size: 50px;
+        font-family: 'Mochiy Pop P One', sans-serif;
+        color: var(--prussian-blue);
+
+    }
+    #searchEL {
+        width: 50%;
+        margin-left: 150px;
+        /* margin-right: 400px; */
+        margin-bottom: 100px;
+    }
+
+    #firstEL {
+        margin-left: 0px;
+    }
+    
+    
+}
 
