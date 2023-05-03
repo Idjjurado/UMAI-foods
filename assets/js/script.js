@@ -1,5 +1,6 @@
 var recipeHolder = $('#favorites')
 var clearBtn = $('#clear')
+   let ingredName = ""
 
 function clear() {
     localStorage.clear();
