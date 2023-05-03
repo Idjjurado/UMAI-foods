@@ -1,11 +1,10 @@
 var recipeHolder = $('#favorites')
 var clearBtn = $('#clear')
 
-// function clear() {
-//     localStorage.clear();
-//     recipeHolder.children().remove();
-//     // recipeSave = {};
-// }
+function clear() {
+    localStorage.clear();
+    recipeHolder.children().remove();
+}
 
 const savedRecipes = JSON.parse(localStorage.getItem("savedRecipes"))
 if (!savedRecipes){
@@ -28,9 +27,9 @@ else {
 			ingredientList.append(ing)
 		}
 	}
-	$("#favorites")
-    if (saved.children().length > 7) {
-        saved.children().eq(6).remove();
+
+    if (recipeHolder.children().length > 6) {
+        recipeHolder.children().eq(6).remove();
      }
 }
 
@@ -100,4 +99,4 @@ let url = doQuery('https://themealdb.p.rapidapi.com/search.php', userRecipe);
 console.log(url);
 console.log(localStorage);
 
-// clearBtn.on('click', clear)
+clearBtn.on('click', clear)
