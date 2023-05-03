@@ -17,9 +17,10 @@ $.ajax(settingsSearchmeal).done(function (response) {
     
     const recipeInfo = response.meals[0];
     console.log(recipeInfo);
-
+    
     for (var i = 1; i < 20; i++) {
-        if (recipeInfo[i]) {
+        console.log(response.meals[i]);
+        if (response.meals[i]) {
             const recipeCard = document.createElement("div");
             recipeCard.setAttribute("class", "card-style");
             recipeCard.setAttribute("id", "card-recipe");
@@ -49,7 +50,6 @@ $.ajax(settingsSearchmeal).done(function (response) {
             $("#rrimage").attr("src", recipeInfo.strMealThumb);
             $("#recipe-link").attr("href", recipeInfo.strSource);
             $("#recipe-video").attr(recipeInfo.strYoutube);
-
         }
     }
     
