@@ -6,198 +6,192 @@
 --timberwolf: #d4d4d4ff;
 }
         
-    /* * {
-        border: 2px solid black;
-    } */
     
-    main {
-       background-color: var(--light-blue);
-    }
+main {
+   background-color: var(--light-blue);
+}
+  
+
+/* This is where the header styling starts */
+header {
+    background-color: var(--persian-red);
+    position: sticky;
+    top: 0;
+}
+
+
+/* This is the easter egg styling */
+header h3 {
+    content-visibility: hidden;
+    text-align: center;
+    padding-top: 25px;
+    height: 75px;
+    width: 200px;
+}
+
+header h3:hover {
+    content-visibility: visible;
+    color: var(--timberwolf);
+}
+
+#secret {
+    text-decoration: none;
+}
       
-    header {
-        background-color: var(--persian-red);
-        position: sticky;
-        top: 0;
-    }
-    
-    header h3 {
-        content-visibility: hidden;
-        text-align: center;
-        padding-top: 25px;
-        height: 75px;
-        width: 200px;
-    }
-    
-    header h3:hover {
-        content-visibility: visible;
-        color: var(--ghost-white);
-    }
-      
-    .navbar {
-        box-shadow: 0px 15px 20px -10px var(--persian-red);
-        padding: 20px;
-    }
-    
-    #headerTitle {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        background-color: var(--persian-red);
-        padding: 10px;
-    }
-    
-    #headerTitle a {
+.navbar {
+    box-shadow: 0px 15px 20px -10px var(--persian-red);
+    padding: 20px;
+}
+
+#headerTitle {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--persian-red);
+    padding: 10px;
+}
+
+#headerTitle a {
     background-color: var(--persian-red);
     border-radius: 20px;
     padding: 20px;
+}
+
+.navbar {
+    background-color: var(--persian-red);
+    display: flex;
+}
+
+
+/* This is where the button styling starts */
+.nav-link {
+    text-align: center;
+    width: 200px;
+    height: fit-content;
+    position: relative;
+    background-color: var(--citrine);
+    border-radius: 20px;
+    margin: 20px 100px 0px 100px;
+    border: 2px solid var(--timberwolf);
+    font-size: 150%;
+}
+
+.hover-text {
+    display: none;
+}
+    
+.three:hover {
+    width: 300px;
+    height: 80px;
+    position: relative;
+    right: 50px;
+}
+
+.nav-item img:hover {
+    display: none;
+}
+
+.nav-item img:hover + .hover-text {
+    display: inline;
+    font-size: 30px;
+    padding: 0;
+    border-radius: 10px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: var(--persian-red);
+}
+        
+.nav-link:hover {
+    cursor: pointer;
+    background-color: var(--timberwolf);
+    border: 2px solid var(--timberwolf);
+}
+     
+
+/* This is where the card styling starts */
+.card-style {
+    background-color: var(--celadon);
+    font-family: 'Mochiy Pop P One', sans-serif;
+    border-radius: 25px;
+    margin: 15px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 15px 5px var(--persian-red);
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+    flex: 17%;
+    color: rgb(41, 37, 37);
+}
+
+.card-style h3 {
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.rrimage {
+    width: 75%;
+    margin: 20px;
+    border: 2px solid var(--persian-red);
+    border-radius: 25px;
+}
+
+.card-style a {
+    color: var(--citrine);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--persian-red);
+}
+
+.card-style:hover {
+    color: rgb(41, 37, 37);
+    text-decoration: none;
+}
+        
+.card-style a:hover {
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--citrine);
+    box-shadow: 5px 5px 5px var(--citrine);
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* The media screens make our site mobile friendly */
+@media only screen and (max-width: 1635px) {
+    
+    li.nav-item {
+        width: 100px;
+        margin: 20px;
+        margin-right: 150px;
     }
+}
         
-        .navbar {
-            background-color: var(--persian-red);
-            display: flex;
-        }
+
+@media only screen and (max-width: 1240px) {
     
-        .hover-text {
-            display: none;
-        }
-    
-        .three:hover {
-            width: 300px;
-            height: 80px;
-            position: relative;
-            right: 50px;
-        }
-    
-        .nav-item img:hover {
-            display: none;
-        }
-        
-        .nav-item img:hover + .hover-text {
-            display: inline;
-            font-size: 30px;
-            padding: 0;
-            border-radius: 10px;
-            font-family: 'Mochiy Pop P One', sans-serif;
-            color: var(--persian-red);
-        }
-        
-        
-        .nav-item:hover + .nav-item img:hover {
-            display: none;
-        }
-        
-        .nav-link {
-            text-align: center;
-            width: 200px;
-            height: fit-content;
-            position: relative;
-            background-color: var(--citrine);
-            border-radius: 20px;
-            margin: 20px 100px 0px 100px;
-            border: 2px solid var(--timberwolf);
-            font-size: 150%;
-        }
-        
-        .nav-link:hover {
-            cursor: pointer;
-            background-color: var(--timberwolf);
-            border: 2px solid var(--timberwolf);
-        }
-    
-      
-        
-        
-        #ul {
-            list-style: none;
-            display: inline-block;
-        }
-        
-        #ul li {
-            float: left;
-            margin: 0 20px;
-        }
-        
-        .rrimage {
-            width: 75%;
-            margin: 20px;
-            border: 2px solid var(--persian-red);
-            border-radius: 25px;
-        }
-        
-        .card-style {
-            background-color: var(--celadon);
-            font-family: 'Mochiy Pop P One', sans-serif;
-            border-radius: 25px;
-            margin: 15px;
-            margin-top: 50px;
-            box-shadow: 0px 0px 15px 5px var(--persian-red);
-            text-align: center;
-            height: 100%;
-            /* width: 20%; */
-            padding: 20px;
-            flex: 17%;
-        }
-        
-        .card-style h3 {
-            margin-top: 20px;
-            font-size: 40px;
-        }
-        
-        .card-style a {
-            color: var(--citrine);
-            padding: 10px;
-            border-radius: 10px;
-            background-color: var(--persian-red);
-        }
-        
-        .card-style a:hover {
-            color: black;
-            padding: 10px;
-            border-radius: 10px;
-            background-color: var(--citrine);
-            box-shadow: 5px 5px 5px var(--citrine);
-        }
+    #headerTitle span {
+        display: none;
+    }
 
+    li.nav-item {
+        width: 30px;
+        margin: 20px;
+        margin-right: 150px;
+    }
+} 
+        
+@media only screen and (max-width: 992px) {
+    #headerTitle {
+        display: none;
+    }
 
-        .wrapper {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        @media only screen and (max-width: 1635px) {
-
-            li.nav-item {
-                width: 100px;
-                margin: 20px;
-                margin-right: 150px;
-            }
-        
-        }
-        
-
-        @media only screen and (max-width: 1240px) {
-            
-            #headerTitle span {
-                display: none;
-            }
-        
-            li.nav-item {
-                width: 30px;
-                margin: 20px;
-                margin-right: 150px;
-            }
-        
-        } 
-        
-        @media only screen and (max-width: 992px) {
-            #headerTitle {
-                display: none;
-            }
-        
-            li.nav-item {
-                width: 100%;
-                margin: 0px;
-                margin-right: 0px;
-            }
-            
-        }
+    li.nav-item {
+        width: 100%;
+        margin: 0px;
+        margin-right: 0px;
+    }
+}

@@ -6,9 +6,6 @@
 --prussian-blue: #143151ff;
 }
 
-/* * {
-    border: 2px solid black;
-} */
 
 body {
     background-color: var(--mint-cream);
@@ -16,7 +13,6 @@ body {
 
 
 /* This is all header stuff */
-
 header {
     background-color: var(--cadet-gray);
     width: 100%;
@@ -29,6 +25,7 @@ ul {
     display: flex;
 }
 
+/* This is the easter egg styling */
 header h3 {
     content-visibility: hidden;
     text-align: center;
@@ -39,6 +36,11 @@ header h3 {
 
 header h3:hover {
     content-visibility: visible;
+    color: var(--prussian-blue);
+}
+
+#secret {
+    text-decoration: none;
 }
 
 #headerTitle {
@@ -51,7 +53,6 @@ header h3:hover {
 
 
 /* This is all of the buttons in the header */
-
 .nav-item {
     height: fit-content;
     width: fit-content;
@@ -86,9 +87,6 @@ header h3:hover {
 .navbar {
     box-shadow: 0px 15px 20px -10px var(--prussian-blue);
     padding: 20px;
-}
-
-.navbar {
     background-color: var(--cadet-gray);
     display: flex;
 }
@@ -106,7 +104,6 @@ header h3:hover {
     display: none;
 }
 
-
 .hover-text {
     display: none;
 }
@@ -118,17 +115,10 @@ header h3:hover {
     border-radius: 10px;
     background-color: var(--verdigris);
     font-family: 'Mochiy Pop P One', sans-serif;
- 
-}
-
-
-.nav-item:hover + .nav-item img:hover {
-    display: none;
 }
 
 
 /* Main page elements */
-
 #mainEL {
     display: flex;
     flex-wrap: wrap;
@@ -136,6 +126,12 @@ header h3:hover {
     background-color: var(--mint-cream);
 }
 
+/* This is all the left side of the page */
+#firstEL {
+    justify-content: center;
+    width: 35%;
+    background-color: var(--mint-cream);
+}
 
 #about-us {
     background-color: var(--cadet-gray);
@@ -148,6 +144,12 @@ header h3:hover {
     padding: 20px;
 }
 
+#about-us h3 {
+    font-size: 40px;
+    margin-top: 20px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
 #aboutImage {
     width: 75%;
     margin: 20px;
@@ -155,18 +157,8 @@ header h3:hover {
     border-radius: 20px;
 }
 
-#about-us h3 {
-    font-size: 40px;
-    margin-top: 20px;
-    font-family: 'Mochiy Pop P One', sans-serif;
-}
 
-#firstEL {
-    justify-content: center;
-    width: 35%;
-    background-color: var(--mint-cream);
-}
-
+/* This is the middle of the page, the search area */
 #searchEL {
     display: flex;
     flex-direction: column;
@@ -199,6 +191,8 @@ header h3:hover {
     box-shadow: 5px 5px 5px var(--prussian-blue);
 }
 
+
+/* This is the carousel on the right side */
 #thirdEL {
     display: flex;
     flex-direction: column;
@@ -210,12 +204,8 @@ header h3:hover {
     font-family: 'Mochiy Pop P One', sans-serif;
 }
 
-#bottom {
-    height: 550px;
-}
 
 /* This is all the carousel stuff */
-
 #carouselExampleIndicators {
     background-color: var(--cadet-gray);
     box-shadow: 0px 0px 15px 5px var(--prussian-blue);
@@ -248,11 +238,11 @@ header h3:hover {
     font-family: 'Mochiy Pop P One', sans-serif;
     padding: 10px;
 }
+
 .carousel-caption > h3 {
     color: var(--walnut-brown);
     text-shadow: 2px 5px var(--cadet-gray);
     font-size: 100%;
-
 }
 
 .carousel-caption > p {
@@ -260,7 +250,11 @@ header h3:hover {
 }
 
 
-/* This is the saved recipes container stuff */
+/* This is all of the recipe container stuff */
+#bottom {
+    height: 550px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -295,6 +289,8 @@ header h3:hover {
     color: var(--prussian-blue);
 }
 
+
+/* This is the part that holds all of the recipes inside the container */
 #favorites {
     display: flex;
     background-color: var(--cadet-gray);
@@ -321,7 +317,6 @@ header h3:hover {
     align-items: center;
 }
 
-
 footer {
     height: 150px;
     width: 100%;
@@ -332,7 +327,9 @@ footer {
 }
 
 
+/* Media queries to make the page mobile friendly */
 @media only screen and (max-width: 1879px) {
+
     ul {
         flex-wrap: wrap;
         justify-content: center;
@@ -379,7 +376,6 @@ footer {
         font-size: 50px;
         font-family: 'Mochiy Pop P One', sans-serif;
         color: var(--prussian-blue);
-
     }
     #searchEL {
         width: 50%;
