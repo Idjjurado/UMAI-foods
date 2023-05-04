@@ -173,6 +173,7 @@ $.ajax(settingsSpicy).done(function (response) {
             recipeVideo.innerText = "WATCH RECIPE VIDEO HERE!"
             recipeSection.appendChild(recipeVideo);
     	}
+
 	}
 });
 

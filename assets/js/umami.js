@@ -48,10 +48,10 @@ $.ajax(settingsUmami).done(function (response) {
             recipeSection.appendChild(recipeVideo);
 
             const recipeLink = document.createElement('a');
-			recipeCard.parentNode.insertBefore(recipeLink, recipeCard);
-			recipeLink.appendChild(recipeCard);
+			      recipeCard.parentNode.insertBefore(recipeLink, recipeCard);
+			      recipeLink.appendChild(recipeCard);
             recipeLink.setAttribute("class", "card-style");
-			recipeLink.setAttribute("href", recipeInfo.strSource);
+			      recipeLink.setAttribute("href", recipeInfo.strSource);
 		}
     
     }

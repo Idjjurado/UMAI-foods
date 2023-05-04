@@ -1,4 +1,6 @@
 var localRecipe = localStorage.getItem("recipeURL")
+// let recipeSave = {}
+// let recipeSaveButtonText = $("#saveRecipe").text()
 
 const settingsSearchmeal = {
 	async: true,
