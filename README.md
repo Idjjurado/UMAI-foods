@@ -24,7 +24,7 @@ or by looking at the bottom of the main page.
 The font used for the main title of the page as well as the buttons on every page is called "Yeyey",
 created by DonMarciano, and was accessed from fontspace.com.
 The soot sprite gif used in our title was created by Flavia-Elric on deviantart.com.
-Both of these resources were licsenced as free to use by their respective creators.
+Both of these resources were licensed as free to use by their respective creators.
 
 ## Credit
 Shanna Morris: https://github.com/ShannaRenee
