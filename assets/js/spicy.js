@@ -101,11 +101,14 @@ const animeIds = [
 	"11741"
 ]
 
+// let recipeSave = {}
+// let recipeSaveButtonText = $("#saveRecipe").text()
+
 // THIS IS FOR THE SPICY PAGE
 const settingsSpicy = {
 	async: true,
 	crossDomain: true,
-	url: 'https://themealdb.p.rapidapi.com/filter.php?i=chilli',
+	url: 'https://themealdb.p.rapidapi.com/filter.php?i=cayenne_pepper',
 	method: 'GET',
 	headers: {
 		'content-type': 'application/octet-stream',
@@ -114,59 +117,78 @@ const settingsSpicy = {
 	}
 };
 
+// $.ajax(settingsSpicy).done(function (response) {
+// 	console.log(response);
+	
+// 	const recipeInfo = response.meals[0];
+
+// 	recipeSave ["recipeName"] = recipeInfo.strMeal
+// 	recipeSave ["ingredients"] = []
+// 	for (var i = 1; i < 20; i++) {
+// 		if (recipeInfo["strIngredient" + i].length > 0) {
+// 			const ingredList = document.createElement("li");
+// 			const cookingMeasure = recipeInfo["strMeasure" + i];
+// 			const ingredName = recipeInfo["strIngredient" + i];
+
+// 			recipeSave.ingredients.push({"cookingMeasure":cookingMeasure, "ingredName":ingredName})
+
+// 			console.log(recipeInfo["strIngredient" + i].length > 0);
+// 		}
+// 	} console.log(recipeSave)
+
+// });
+
 $.ajax(settingsSpicy).done(function (response) {
-	console.log(response);
-	
-	const recipeInfo = response.meals[0];
-	const addList = document.querySelector("#ingredients-list")
-	
-	$("#recipe-title").text(recipeInfo.strMeal);
-	$("#rrimage").attr("src", recipeInfo.strMealThumb);
-	$("#instruction-block").text(recipeInfo.strInstructions);
-	$("#recipe-video").attr(recipeInfo.strYoutube);
+    console.log(response);
+        
+    for (var i = 1; i < 10; i++) {
+		if (response.meals[i]) {
+            const recipeInfo = response.meals[i];
+            const recipeCard = document.createElement("div");
+            recipeCard.setAttribute("id", "card-recipe" + i);
+			recipeCard.setAttribute("class", "card-style")
+            document.getElementById("card-container").appendChild(recipeCard);
 
+            const recipeSection = document.createElement("section");
+            recipeSection.setAttribute("id", "recipe-section");
+            recipeCard.appendChild(recipeSection);
 
-	for (var i = 1; i < 20; i++) {
-		if (recipeInfo["strIngredient" + i].length > 0) {
-			const ingredList = document.createElement("li");
-			const cookingMeasure = recipeInfo["strMeasure" + i];
-			const ingredName = recipeInfo["strIngredient" + i];
+            const recipeSave = document.createElement("a");
+            recipeSave.setAttribute("id", "saveRecipe");
+            recipeSave.innerText = "Save this recipe!";
+            recipeSection.appendChild(recipeSave);
 
-			ingredList.textContent = cookingMeasure + " " + ingredName;
-			addList.appendChild(ingredList);
+            const recipeTitle = document.createElement("h3");
+            recipeTitle.innerText = recipeInfo.strMeal;
+            recipeSection.appendChild(recipeTitle);
+           
+            const recipeImage = document.createElement("img");
+            recipeImage.setAttribute("class", "rrimage")
+            recipeImage.setAttribute("src", recipeInfo.strMealThumb);
+            recipeSection.appendChild(recipeImage);
 
-			console.log(recipeInfo["strIngredient" + i].length > 0);
-		}
+            const recipeVideo = document.createElement("a");
+            recipeVideo.setAttribute("href", recipeInfo.strYoutube);
+            recipeVideo.setAttribute("target", "_blank");
+            recipeVideo.innerText = "WATCH RECIPE VIDEO HERE!"
+            recipeSection.appendChild(recipeVideo);
+    	}
+
 	}
-
 });
 
-function sample(arr) {
-	const index = Math.floor(Math.random()*arr.length)
-	return arr[index]
-}
+// $("#saveRecipe").click(function(){
+// 	if (recipeSaveButtonText === "recipe Saved!"){
+// 		return
+// 	}
+// 	let recipeSaveList = JSON.parse(localStorage.getItem("savedRecipes")) 
+// 	if (!recipeSaveList){
+// 		recipeSaveList = []
+// 	}
+// 	recipeSaveList.push(recipeSave)
 
-const id = sample(animeIds)
-const settingsAnime = {
-	async: true,
-	crossDomain: true,
-	url: `https://anime-db.p.rapidapi.com/anime/by-id/${id}`,
-	method: 'GET',
-	headers: {
-		'content-type': 'application/octet-stream',
-		'X-RapidAPI-Key': '8fba490658msh30c9e8c9a48dc6bp15f465jsnfa24de2a900b',
-		'X-RapidAPI-Host': 'anime-db.p.rapidapi.com'
-	}
-};
+// 	localStorage.setItem("savedRecipes",JSON.stringify(recipeSaveList))
+// 	recipeSave = {};
+// 	$("#saveRecipe").text("recipe Saved!")
+// });
 
-
-$.ajax(settingsAnime).done(function (animeIds) {
-	console.log(animeIds);
-	console.log(animeIds.link);
-	
-	$("#anime-title").text(animeIds.title);
-	$("#animeimage").attr("src", animeIds.image);
-	$("#anime-synopsis").text(animeIds.synopsis);
-	$("#link-anime").attr("href", animeIds.link);
-
-});

@@ -6,25 +6,53 @@
 --prussian-blue: #143151ff;
 }
 
-/* * {
-    border: 2px solid black;
-} */
 
 body {
     background-color: var(--mint-cream);
 }
 
+
+/* This is all header stuff */
 header {
     background-color: var(--cadet-gray);
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 1;
 }
 
-.navbar-nav {
-    width: 100%;
+ul {
+    display: flex;
 }
 
+/* This is the easter egg styling */
+header h3 {
+    content-visibility: hidden;
+    text-align: center;
+    padding-top: 25px;
+    height: 75px;
+    width: 200px;
+}
+
+header h3:hover {
+    content-visibility: visible;
+    color: var(--prussian-blue);
+}
+
+#secret {
+    text-decoration: none;
+}
+
+#headerTitle {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--cadet-gray);
+    padding: 10px;
+}
+
+
+/* This is all of the buttons in the header */
 .nav-item {
     height: fit-content;
     width: fit-content;
@@ -56,34 +84,9 @@ header {
     height: 35px;
 }
 
-
-
 .navbar {
     box-shadow: 0px 15px 20px -10px var(--prussian-blue);
     padding: 20px;
-}
-
-header h3 {
-    content-visibility: hidden;
-    text-align: center;
-    padding-top: 25px;
-    height: 75px;
-    width: 200px;
-}
-
-header h3:hover {
-    content-visibility: visible;
-}
-
-#headerTitle {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: var(--cadet-gray);
-    padding: 10px;
-}
-
-.navbar {
     background-color: var(--cadet-gray);
     display: flex;
 }
@@ -101,7 +104,6 @@ header h3:hover {
     display: none;
 }
 
-
 .hover-text {
     display: none;
 }
@@ -113,20 +115,23 @@ header h3:hover {
     border-radius: 10px;
     background-color: var(--verdigris);
     font-family: 'Mochiy Pop P One', sans-serif;
- 
 }
 
 
-.nav-item:hover + .nav-item img:hover {
-    display: none;
-}
-
+/* Main page elements */
 #mainEL {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     background-color: var(--mint-cream);
 }
 
+/* This is all the left side of the page */
+#firstEL {
+    justify-content: center;
+    width: 35%;
+    background-color: var(--mint-cream);
+}
 
 #about-us {
     background-color: var(--cadet-gray);
@@ -145,17 +150,21 @@ header h3:hover {
     font-family: 'Mochiy Pop P One', sans-serif;
 }
 
-#firstEL {
-    justify-content: center;
-    width: 40%;
-    background-color: var(--mint-cream);
+#aboutImage {
+    width: 75%;
+    margin: 20px;
+    border: 2px solid var(--prussian-blue);
+    border-radius: 20px;
 }
+
+
+/* This is the middle of the page, the search area */
 #searchEL {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20%;
+    width: 25%;
     font-family: 'Mochiy Pop P One', sans-serif;
 }
 
@@ -182,6 +191,8 @@ header h3:hover {
     box-shadow: 5px 5px 5px var(--prussian-blue);
 }
 
+
+/* This is the carousel on the right side */
 #thirdEL {
     display: flex;
     flex-direction: column;
@@ -191,17 +202,10 @@ header h3:hover {
     width: 40%;
     text-align: center;
     font-family: 'Mochiy Pop P One', sans-serif;
-
 }
 
 
-#BBimage {
-    width: 75%;
-    margin: 20px;
-    border: 2px solid var(--prussian-blue);
-    border-radius: 20px;
-}
-
+/* This is all the carousel stuff */
 #carouselExampleIndicators {
     background-color: var(--cadet-gray);
     box-shadow: 0px 0px 15px 5px var(--prussian-blue);
@@ -234,27 +238,33 @@ header h3:hover {
     font-family: 'Mochiy Pop P One', sans-serif;
     padding: 10px;
 }
+
 .carousel-caption > h3 {
     color: var(--walnut-brown);
     text-shadow: 2px 5px var(--cadet-gray);
     font-size: 100%;
-
 }
 
 .carousel-caption > p {
     color: var(--walnut-brown);
 }
 
+
+/* This is all of the recipe container stuff */
+#bottom {
+    height: 550px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
-    height: 500px;
-    width: 1000px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     background-color: var(--cadet-gray);
     text-align: center;
     border-radius: 25px;
     border: 5px solid var(--prussian-blue);
-
 }
 
 .container h3 {
@@ -262,25 +272,49 @@ header h3:hover {
     width: 100%;
     padding-top: 7px;
     font-family: 'Mochiy Pop P One', sans-serif;
-
 }
 
+.container button {
+    width: 20%;
+    background-color: var(--prussian-blue);
+    color: var(--mint-cream);
+    border: 2px solid var(--mint-cream);
+    border-radius: 10px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    padding: 3px;
+}
+
+.container button:hover {
+    background-color: var(--verdigris);
+    color: var(--prussian-blue);
+}
+
+
+/* This is the part that holds all of the recipes inside the container */
 #favorites {
     display: flex;
-    align-items: end;
     background-color: var(--cadet-gray);
-    height: 90%;
+    height: 80%;
     width: 100%;
+    max-height: fit-content;
 }
 
 #favorites div {
     background-color: var(--mint-cream);
     padding: 10px;
     margin: 10px;
+    border: 2px solid var(--prussian-blue);
     border-radius: 20px;
     box-shadow: 5px 5px 5px var(--walnut-brown);
     font-family: 'Mochiy Pop P One', sans-serif;
-    height: 95%;
+    align-items: center;
+    width: 20%;
+}
+
+#favorites ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 footer {
@@ -293,3 +327,64 @@ footer {
 }
 
 
+/* Media queries to make the page mobile friendly */
+@media only screen and (max-width: 1879px) {
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 1520px) {
+    
+    #headerTitle span {
+        display: none;
+    }
+
+    #mainEL {
+        flex-direction: column;
+    }
+
+    #firstEL {
+        width: 100%;
+        margin-left: 150px;
+    }
+    #searchEL {
+        width: 50%;
+        margin-left: 350px;
+        margin-bottom: 100px;
+    }
+    #thirdEL {
+        width: 100%;
+    }
+
+    #bottom {
+        margin-top: 50px;
+    }
+} 
+
+@media only screen and (max-width: 991px) {
+
+    #headerTitle img {
+        display: none;
+    }
+
+    #headerTitle a::after {
+        content: "Umai Foods";
+        font-size: 50px;
+        font-family: 'Mochiy Pop P One', sans-serif;
+        color: var(--prussian-blue);
+    }
+    #searchEL {
+        width: 50%;
+        margin-left: 150px;
+        /* margin-right: 400px; */
+        margin-bottom: 100px;
+    }
+
+    #firstEL {
+        margin-left: 0px;
+    } 
+}

@@ -4,155 +4,198 @@
     --indigo-dye: #004272ff;
     --coral: #f18058ff;
     --platinum: #dae0e0ff;
-        }
-        
-    /* * {
-        border: 2px solid black;
-    } */
-    
-    main {
-       background-color: var(--melon);
-    }
-      
-    header {
-        background-color: var(--melon);
-        position: sticky;
-        top: 0;
-    }
+}
 
-    header h3 {
-        content-visibility: hidden;
-        text-align: center;
-        padding-top: 25px;
-        height: 75px;
-        width: 200px;
-    }
-    
-    header h3:hover {
-        content-visibility: visible;
-    }
-      
-    .navbar {
-        box-shadow: 0px 15px 20px -10px var(--indigo-dye);
-        padding: 20px;
-    }
-    
-    #headerTitle {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        background-color: var(--coral);
-        padding: 10px;
-    }
-    
-    #headerTitle a {
+
+main {
+    background-color: var(--melon);
+}
+  
+
+/* This is all the header stying */
+header {
+    background-color: var(--melon);
+    position: sticky;
+    top: 0;
+}
+
+/* Easter egg in the header */
+header h3 {
+    content-visibility: hidden;
+    text-align: center;
+    padding-top: 25px;
+    height: 75px;
+    width: 200px;
+}
+
+header h3:hover {
+    content-visibility: visible;
+    color: var(--indigo-dye);
+}
+
+#secret {
+    text-decoration: none;
+}
+  
+.navbar {
+    box-shadow: 0px 15px 20px -10px var(--indigo-dye);
+    padding: 20px;
+}
+
+#headerTitle {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--coral);
+    padding: 10px;
+}
+
+#headerTitle a {
     background-color: var(--coral);
     border-radius: 20px;
     padding: 20px;
-    }
-    
-        .navbar {
-            background-color: var(--coral);
-            display: flex;
-        }
-    
-        .hover-text {
-            display: none;
-        }
-    
-        .three:hover {
-            width: 300px;
-            height: 80px;
-            position: relative;
-            right: 50px;
-        }
-    
-        .nav-item img:hover {
-            display: none;
-        }
-        
-        .nav-item img:hover + .hover-text {
-            display: inline;
-            font-size: 30px;
-            padding: 0;
-            border-radius: 10px;
-            font-family: 'Mochiy Pop P One', sans-serif;
-            color: var(--platinum);
-        }
-        
-        
-        .nav-item:hover + .nav-item img:hover {
-            display: none;
-        }
-        
-        .nav-link {
-            text-align: center;
-            width: 200px;
-            height: fit-content;
-            position: relative;
-            background-color: var(--straw);
-            border-radius: 20px;
-            margin: 20px 100px 0px 100px;
-            border: 2px solid var(--indigo-dye);
-            font-size: 150%;
-        }
-        
-        .nav-link:hover {
-            cursor: pointer;
-            background-color: var(--indigo-dye);
-            border: 2px solid var(--indigo-dye);
-        }
-    
+}
+
+.navbar {
+    background-color: var(--coral);
+    display: flex;
+}
+
+
+/* This is the buttons in the navbar styling */
+.hover-text {
+    display: none;
+}
+
+.three:hover {
+    width: 300px;
+    height: 80px;
+    position: relative;
+    right: 50px;
+}
+
+.nav-link {
+    text-align: center;
+    width: 200px;
+    height: fit-content;
+    position: relative;
+    background-color: var(--straw);
+    border-radius: 20px;
+    margin: 20px 100px 0px 100px;
+    border: 2px solid var(--indigo-dye);
+    font-size: 150%;
+}
+
+
+/* This is how the buttons change on hover */
+.nav-link img:hover {
+    display: none;
+}
+
+.nav-link img:hover + .hover-text {
+    display: inline;
+    font-size: 30px;
+    padding: 0;
+    border-radius: 10px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: var(--platinum);
+}
+
+
+.nav-item:hover + .nav-item img:hover {
+    display: none;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+    background-color: var(--indigo-dye);
+    border: 2px solid var(--indigo-dye);
+}
       
+
+/* This section is the card styling and the elements within it */
+.card-style {
+    background-color: var(--coral);
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: rgb(221, 218, 213);
+    border-radius: 25px;
+    margin: 15px;
+    margin-left: 25px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 15px 5px var(--indigo-dye);
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+    flex: 17%;
+}
+
+.card-style h3 {
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.rrimage {
+    width: 75%;
+    margin: 20px;
+    border: 2px solid var(--indigo-dye);
+    border-radius: 25px;
+}
+
+.card-style a {
+    color: var(--platinum);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--indigo-dye);
+    width: 60%;
+}
+
+.card-style:hover {
+    color: var(--platinum);
+    text-decoration: none;
+}
+
+#saveRecipe {
+    color: var(--platinum);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--indigo-dye);
+    width: 60%;
+}
+    
+.card-style a:hover {
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--straw);
+    box-shadow: 5px 5px 5px var(--indigo-dye);
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Media queries to make the site mobile friendly */
+@media only screen and (max-width: 1240px) {
+    #headerTitle span {
+        display: none;
+    }
+
+    li.nav-item {
+        width: 100px;
+        margin: 20px;
+        margin-right: 150px;
+    }
+} 
         
-        
-        #ul {
-            list-style: none;
-            display: inline-block;
-        }
-        
-        #ul li {
-            float: left;
-            margin: 0 20px;
-        }
-        
-        #rrimage {
-            width: 75%;
-            margin: 20px;
-            border: 2px solid var(--indigo-dye);
-            border-radius: 25px;
-        }
-        
-        .card-style {
-            background-color: var(--coral);
-            font-family: 'Mochiy Pop P One', sans-serif;
-            color: rgb(221, 218, 213);
-            border-radius: 25px;
-            margin: 15px;
-            margin-top: 50px;
-            box-shadow: 0px 0px 15px 5px var(--indigo-dye);
-            text-align: center;
-            width: 20%;
-            height: 100%;
-            padding: 20px;
-        }
-        
-        .card-style h3 {
-            margin-top: 20px;
-            font-size: 40px;
-        }
-        
-        .card-style a {
-            color: var(--platinum);
-            padding: 10px;
-            border-radius: 10px;
-            background-color: var(--indigo-dye);
-        }
-        
-        .card-style a:hover {
-            color: black;
-            padding: 10px;
-            border-radius: 10px;
-            background-color: var(--straw);
-            box-shadow: 5px 5px 5px var(--indigo-dye);
-        }
+@media only screen and (max-width: 1000px) {
+    #headerTitle {
+        display: none;
+    }
+
+    li.nav-item {
+        width: 100%;
+        margin: 0px;
+        margin-right: 0px;
+    }
+}

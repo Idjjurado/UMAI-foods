@@ -1,3 +1,40 @@
+var recipeHolder = $('#favorites')
+var clearBtn = $('#clear')
+   let ingredName = ""
+
+function clear() {
+    localStorage.clear();
+    recipeHolder.children().remove();
+}
+
+//Displays the saved Meal array elements of name, ingredients, and ingredient ammount
+const savedRecipes = JSON.parse(localStorage.getItem("savedRecipes"))
+if (!savedRecipes){
+	recipeHolder.text("There are no recipes saved.")
+}
+else {
+	console.log(savedRecipes)
+	for (let i = 0; i < savedRecipes.length; i++){
+		let recipeDiv = $("<div>")
+		recipeDiv.append($("<p>").text(savedRecipes[i].recipeName))
+		recipeHolder.append(recipeDiv)
+		const ingredients = savedRecipes[i].ingredients
+		let ingredientList = $("<ul>")
+		recipeDiv.append(ingredientList)
+		//for (let j = 0; j < ingredients.length; j++) {
+        for (let j = 0; j < 8; j++) {
+
+			const ing = $("<li>")
+			ing.text(ingredients[j].ingredName)
+			ingredientList.append(ing)
+		}
+	}
+
+    if (recipeHolder.children().length > 6) {
+        recipeHolder.children().eq(6).remove();
+     }
+}
+
 const settings = {
 	async: true,
 	crossDomain: true,
@@ -63,3 +100,5 @@ let url = doQuery('https://themealdb.p.rapidapi.com/search.php', userRecipe);
 //send to the browser
 console.log(url);
 console.log(localStorage);
+
+clearBtn.on('click', clear)

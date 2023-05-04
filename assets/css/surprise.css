@@ -4,22 +4,23 @@
     --school-bus-yellow: rgb(240, 223, 112);
     --brunswick-green: #16554bff;
     --snow: #f4f0f2ff;
-    }
+}
     
-/* * {
-    border: 2px solid black;
-} */
 
 main {
    background-color: var(--school-bus-yellow);
 }
   
+
+/* This is where the styling for the header starts */
 header {
     background-color: var(--brunswick-green);
     position: sticky;
     top: 0;
 }
 
+
+/* This is the easter egg */
 header h3 {
     content-visibility: hidden;
     text-align: center;
@@ -31,6 +32,10 @@ header h3 {
 header h3:hover {
     content-visibility: visible;
     color: var(--snow);
+}
+
+#secret {
+    text-decoration: none;
 }
   
 .navbar {
@@ -47,122 +52,110 @@ header h3:hover {
 }
 
 #headerTitle a {
-background-color: var(--brunswick-green);
-border-radius: 20px;
-padding: 20px;
+    background-color: var(--brunswick-green);
+    border-radius: 20px;
+    padding: 20px;
 }
 
-    .navbar {
-        background-color: var(--brunswick-green);
-        display: flex;
-    }
-
-    .hover-text {
-        display: none;
-    }
-
-    .three:hover {
-        width: 300px;
-        height: 80px;
-        position: relative;
-        right: 50px;
-    }
-
-    .nav-item img:hover {
-        display: none;
-    }
-    
-    .nav-item img:hover + .hover-text {
-        display: inline;
-        font-size: 30px;
-        padding: 0;
-        border-radius: 10px;
-        font-family: 'Mochiy Pop P One', sans-serif;
-        color: var(--night);
-    }
-    
-    
-    .nav-item:hover + .nav-item img:hover {
-        display: none;
-    }
-    
-    .nav-link {
-        text-align: center;
-        width: 200px;
-        height: fit-content;
-        position: relative;
-        background-color: var(--dark-purple);
-        border-radius: 20px;
-        margin: 20px 100px 0px 100px;
-        border: 2px solid var(--snow);
-        font-size: 150%;
-    }
-    
-    .nav-link:hover {
-        cursor: pointer;
-        background-color: var(--snow);
-        border: 2px solid var(--snow);
-    }
-
-  
-    
-    
-    #ul {
-        list-style: none;
-        display: inline-block;
-    }
-    
-    #ul li {
-        float: left;
-        margin: 0 20px;
-    }
-    
-    #rrimage {
-        width: 75%;
-        margin: 20px;
-        border: 2px solid var(--dark-purple);
-        border-radius: 25px;
-    }
-    
-    .card-style {
-        background-color: var(--brunswick-green);
-        font-family: 'Mochiy Pop P One', sans-serif;
-        color: rgb(221, 218, 213);
-        /* border: 2px solid black; */
-        border-radius: 25px;
-        margin: 25px;
-        margin-top: 50px;
-        box-shadow: 0px 0px 15px 5px var(--night);
-        text-align: center;
-        height: 95%;
-        padding: 20px;
-    }
-    
-    .card-style h3 {
-        margin-top: 20px;
-        font-size: 40px;
-    }
-    
-    .card-style a {
-        color: var(--snow);
-        padding: 10px;
-        border-radius: 10px;
-        background-color: var(--dark-purple);
-    }
-    
-    .card-style a:hover {
-        color: rgb(165, 0, 0);
-        padding: 10px;
-        border-radius: 10px;
-        background-color: var(--school-bus-yellow);
-        box-shadow: 5px 5px 5px var(--night);
-    }
-
-
-.wrapper {
+.navbar {
+    background-color: var(--brunswick-green);
     display: flex;
 }
 
+
+/* This is where the button styling starts */
+.nav-link {
+    text-align: center;
+    width: 200px;
+    height: fit-content;
+    position: relative;
+    background-color: var(--dark-purple);
+    border-radius: 20px;
+    margin: 20px 100px 0px 100px;
+    border: 2px solid var(--snow);
+    font-size: 150%;
+}
+
+.hover-text {
+    display: none;
+}
+
+.three:hover {
+    width: 300px;
+    height: 80px;
+    position: relative;
+    right: 50px;
+}
+
+.nav-item img:hover {
+    display: none;
+}
+    
+.nav-item img:hover + .hover-text {
+    display: inline;
+    font-size: 30px;
+    padding: 0;
+    border-radius: 10px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: var(--night);
+}
+
+.nav-item:hover + .nav-item img:hover {
+    display: none;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+    background-color: var(--snow);
+    border: 2px solid var(--snow);
+}
+
+
+/* This is where the card styling starts */
+.card-style {
+    background-color: var(--brunswick-green);
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: rgb(221, 218, 213);
+    /* border: 2px solid black; */
+    border-radius: 25px;
+    margin: 25px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 15px 5px var(--night);
+    text-align: center;
+    height: 95%;
+    padding: 20px;
+    flex: 17%;
+}
+
+.card-style h3 {
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+#rrimage {
+    width: 75%;
+    margin: 20px;
+    border: 2px solid var(--dark-purple);
+    border-radius: 25px;
+}
+
+.card-style a {
+    color: var(--snow);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--dark-purple);
+}
+
+.card-style a:hover {
+    color: rgb(165, 0, 0);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--school-bus-yellow);
+    box-shadow: 5px 5px 5px var(--night);
+}
+
+
+/* These are setting the layout of the main elements */
 #surprise-recipe {
     width: 40%;
 }
@@ -175,7 +168,6 @@ padding: 20px;
     font-size: 150%;
     height: 100%;
     width: 20%;
-    
 }
 
 #middle h3 {
@@ -191,5 +183,57 @@ padding: 20px;
     cursor: pointer;
     background-color: var(--dark-purple);
     box-shadow: 0px 0px 15px 5px var(--dark-purple);
+}
 
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* These media queries make our site mobile friendly */
+@media only screen and (max-width: 1635px) {
+
+    li.nav-item {
+        width: 100px;
+        margin: 20px;
+        margin-right: 150px;
+    }
+}
+
+@media only screen and (max-width: 1240px) {
+    
+    #headerTitle span {
+        display: none;
+    }
+
+    li.nav-item {
+        width: 30px;
+        margin: 20px;
+        margin-right: 150px;
+    }
+
+    #middle {
+        display: none;
+    }
+
+    #surprise-recipe {
+        width: 50%;
+    }
+
+    #surprise-anime {
+        width: 50%;
+    }
+} 
+
+@media only screen and (max-width: 992px) {
+    #headerTitle {
+        display: none;
+    }
+
+    li.nav-item {
+        width: 100%;
+        margin: 0px;
+        margin-right: 0px;
+    }
 }

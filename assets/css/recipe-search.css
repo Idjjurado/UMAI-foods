@@ -1,30 +1,26 @@
 :root {
-    --black-bean: #481812ff;
-    --ou-crimson: rgb(177, 26, 15);
-    --brown: rgb(202, 112, 80);
-    --sunglow: #ffc853ff;
-    --beige: #faf9e3ff;
+--persian-red: #d12938ff;
+--citrine: #e4cd43ff;
+--light-blue: rgb(78, 206, 223);
+--celadon: #abd597ff;
+--timberwolf: #d4d4d4ff;
 }
         
-
-body {
-    background-color: var(--brown);
-}
-
+    
 main {
-   background-color: var(--brown);
+   background-color: var(--light-blue);
 }
   
 
 /* This is where the header styling starts */
 header {
-    background-color: var(--brown);
+    background-color: var(--persian-red);
     position: sticky;
     top: 0;
 }
 
 
-/* This is the easter egg */
+/* This is the easter egg styling */
 header h3 {
     content-visibility: hidden;
     text-align: center;
@@ -35,7 +31,7 @@ header h3 {
 
 header h3:hover {
     content-visibility: visible;
-    color: var(--beige);
+    color: var(--timberwolf);
 }
 
 #secret {
@@ -43,7 +39,7 @@ header h3:hover {
 }
       
 .navbar {
-    box-shadow: 0px 15px 20px -10px var(--black-bean);
+    box-shadow: 0px 15px 20px -10px var(--persian-red);
     padding: 20px;
 }
 
@@ -51,18 +47,18 @@ header h3:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: var(--black-bean);
+    background-color: var(--persian-red);
     padding: 10px;
 }
 
 #headerTitle a {
-background-color: var(--black-bean);
-border-radius: 20px;
-padding: 20px;
+    background-color: var(--persian-red);
+    border-radius: 20px;
+    padding: 20px;
 }
-        
+
 .navbar {
-    background-color: var(--black-bean);
+    background-color: var(--persian-red);
     display: flex;
 }
 
@@ -73,57 +69,57 @@ padding: 20px;
     width: 200px;
     height: fit-content;
     position: relative;
-    background-color: var(--ou-crimson);
+    background-color: var(--citrine);
     border-radius: 20px;
     margin: 20px 100px 0px 100px;
-    border: 2px solid var(--beige);
+    border: 2px solid var(--timberwolf);
     font-size: 150%;
 }
 
 .hover-text {
     display: none;
 }
-
+    
 .three:hover {
     width: 300px;
     height: 80px;
     position: relative;
     right: 50px;
 }
-    
+
 .nav-item img:hover {
     display: none;
 }
-        
+
 .nav-item img:hover + .hover-text {
     display: inline;
     font-size: 30px;
     padding: 0;
     border-radius: 10px;
     font-family: 'Mochiy Pop P One', sans-serif;
-    color: var(--black-bean);
+    color: var(--persian-red);
 }
-
+        
 .nav-link:hover {
     cursor: pointer;
-    background-color: var(--beige);
-    border: 2px solid var(--beige);
+    background-color: var(--timberwolf);
+    border: 2px solid var(--timberwolf);
 }
-    
+     
 
 /* This is where the card styling starts */
 .card-style {
-    background-color: var(--ou-crimson);
+    background-color: var(--celadon);
     font-family: 'Mochiy Pop P One', sans-serif;
-    color: rgb(221, 218, 213);
     border-radius: 25px;
     margin: 15px;
     margin-top: 50px;
-    box-shadow: 0px 0px 15px 5px red;
+    box-shadow: 0px 0px 15px 5px var(--persian-red);
     text-align: center;
     height: 100%;
     padding: 20px;
     flex: 17%;
+    color: rgb(41, 37, 37);
 }
 
 .card-style h3 {
@@ -134,32 +130,28 @@ padding: 20px;
 .rrimage {
     width: 75%;
     margin: 20px;
-    border: 2px solid var(--black-bean);
+    border: 2px solid var(--persian-red);
     border-radius: 25px;
 }
-              
+
 .card-style a {
-    color: var(--beige);
+    color: var(--citrine);
     padding: 10px;
     border-radius: 10px;
-    background-color: var(--black-bean);
-    text-decoration: none;
+    background-color: var(--persian-red);
 }
 
-#saveRecipe {
-    color: var(--beige);
-    padding: 10px;
-    border-radius: 10px;
-    background-color: var(--black-bean);
+.card-style:hover {
+    color: rgb(41, 37, 37);
+    text-decoration: none;
 }
-            
+        
 .card-style a:hover {
     color: black;
     padding: 10px;
-    border: 2px solid var(--black-bean);
     border-radius: 10px;
-    background-color: var(--ou-crimson);
-    box-shadow: 5px 5px 5px var(--black-bean);
+    background-color: var(--citrine);
+    box-shadow: 5px 5px 5px var(--citrine);
 }
 
 .wrapper {
@@ -167,7 +159,18 @@ padding: 20px;
     flex-wrap: wrap;
 }
 
-/* The media queries to help make the site mobile friendly */
+
+/* The media screens make our site mobile friendly */
+@media only screen and (max-width: 1635px) {
+    
+    li.nav-item {
+        width: 100px;
+        margin: 20px;
+        margin-right: 150px;
+    }
+}
+        
+
 @media only screen and (max-width: 1240px) {
     
     #headerTitle span {
@@ -175,13 +178,13 @@ padding: 20px;
     }
 
     li.nav-item {
-        width: 100px;
+        width: 30px;
         margin: 20px;
         margin-right: 150px;
     }
 } 
-
-@media only screen and (max-width: 1000px) {
+        
+@media only screen and (max-width: 992px) {
     #headerTitle {
         display: none;
     }

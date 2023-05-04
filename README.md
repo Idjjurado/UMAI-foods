@@ -9,6 +9,7 @@ and other tv shows. Can have a place to find some of the amazing
 dishes that can be found. Here at Umai Foods, we have 
 options to have a random recipe pulled and to generate a search. 
 Based on a type of food be it spicy, sweet, or umami. 
+
 ## Usage
 To use this food search, the user can type an ingredient within 
 the search bar to yield a number of recipes that contain said ingredient.
@@ -17,6 +18,14 @@ will populate a recipe tied to that flavor. Along with an anime recommendation
 containing a short description. If a user finds a recipe that wish to make they can save
 the recipe with the click of a button. Which the user can find using the favorites button
 or by looking at the bottom of the main page. 
+
+
+## Attributions
+The font used for the main title of the page as well as the buttons on every page is called "Yeyey",
+created by DonMarciano, and was accessed from fontspace.com.
+The soot sprite gif used in our title was created by Flavia-Elric on deviantart.com.
+Both of these resources were licensed as free to use by their respective creators.
+
 ## Credit
 Shanna Morris: https://github.com/ShannaRenee
 
