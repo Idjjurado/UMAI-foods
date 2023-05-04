@@ -1,11 +1,13 @@
 var recipeHolder = $('#favorites')
 var clearBtn = $('#clear')
+   let ingredName = ""
 
 function clear() {
     localStorage.clear();
     recipeHolder.children().remove();
 }
 
+//Displays the saved Meal array elements of name, ingredients, and ingredient ammount
 const savedRecipes = JSON.parse(localStorage.getItem("savedRecipes"))
 if (!savedRecipes){
 	recipeHolder.text("There are no recipes saved.")
