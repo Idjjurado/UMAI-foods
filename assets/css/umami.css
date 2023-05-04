@@ -138,6 +138,9 @@
             padding: 20px;
             flex: 17%;
         }
+
+        .card-style img {
+        }
         
         .card-style h3 {
             margin-top: 20px;
@@ -150,7 +153,11 @@
             border-radius: 10px;
             background-color: var(--indigo-dye);
             width: 60%;
-            
+        }
+
+        .card-style:hover {
+            color: var(--platinum);
+            text-decoration: none;
         }
 
         #saveRecipe {
