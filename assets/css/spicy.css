@@ -9,6 +9,10 @@
     /* * {
         border: 2px solid black;
     } */
+
+    body {
+        background-color: var(--brown);
+    }
     
     main {
        background-color: var(--brown);
@@ -168,9 +172,6 @@
             box-shadow: 5px 5px 5px var(--black-bean);
         }
 
-.wrapper {
-    display: flex;
-}
 
 #surprise-recipe {
     width: 40%;
