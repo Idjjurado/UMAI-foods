@@ -124,7 +124,7 @@ const settingsRandommeal = {
 		$("#recipe-title").text(recipeInfo.strMeal);
 		$("#rrimage").attr("src", recipeInfo.strMealThumb);
 		$("#instruction-block").text(recipeInfo.strInstructions);
-		$("#recipe-video").attr(recipeInfo.strYoutube);
+		$("#recipe-video").attr("href",recipeInfo.strYoutube);
 
 		recipeSave ["recipeName"] = recipeInfo.strMeal
 		recipeSave ["ingredients"] = []

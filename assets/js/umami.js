@@ -24,14 +24,29 @@ $.ajax(settingsUmami).done(function (response) {
             document.getElementById("card-container").appendChild(recipeCard);
 
             const recipeSection = document.createElement("section");
-            recipeSection.setAttribute("id", "recipe-section");
+            recipeSection.setAttribute("id", "recipe-section" + i);
             recipeCard.appendChild(recipeSection);
 
             const recipeSave = document.createElement("a");
-            recipeSave.setAttribute("id", "saveRecipe");
-            recipeSave.innerText = "Save this recipe!";
+            recipeSave.setAttribute("id", "saveRecipe" + i);
+            recipeSave.innerText = "Recipe instructions!";
             recipeSection.appendChild(recipeSave);
 
+			$("#saveRecipe" + i).click(function(){
+				if (recipeSaveButtonText === "recipe Saved!"){
+					return
+				}
+				let recipeSaveList = JSON.parse(localStorage.getItem("savedRecipes")) 
+				if (!recipeSaveList){
+					recipeSaveList = []
+				}
+				recipeSaveList.push(recipeSave)
+		
+				localStorage.setItem("savedRecipes",JSON.stringify(recipeSaveList))
+				recipeSave = {};
+				$("#saveRecipe" + i).text("recipe Saved!")
+			});
+			
             const recipeTitle = document.createElement("h3");
             recipeTitle.innerText = recipeInfo.strMeal;
             recipeSection.appendChild(recipeTitle);
@@ -50,7 +65,7 @@ $.ajax(settingsUmami).done(function (response) {
             const recipeLink = document.createElement('a');
 			      recipeCard.parentNode.insertBefore(recipeLink, recipeCard);
 			      recipeLink.appendChild(recipeCard);
-            recipeLink.setAttribute("class", "card-style");
+           recipeLink.setAttribute("class", "card-style");
 			      recipeLink.setAttribute("href", recipeInfo.strSource);
 		}
     
@@ -89,17 +104,17 @@ $.ajax(settingsUmami).done(function (response) {
 	// });
 
 
-	// $("#saveRecipe").click(function(){
-	// 	if (recipeSaveButtonText === "recipe Saved!"){
-	// 		return
-	// 	}
-	// 	let recipeSaveList = JSON.parse(localStorage.getItem("savedRecipes")) 
-	// 	if (!recipeSaveList){
-	// 		recipeSaveList = []
-	// 	}
-	// 	recipeSaveList.push(recipeSave)
+	$("#saveRecipe" + i).click(function(){
+		if (recipeSaveButtonText === "recipe Saved!"){
+			return
+		}
+		let recipeSaveList = JSON.parse(localStorage.getItem("savedRecipes")) 
+		if (!recipeSaveList){
+			recipeSaveList = []
+		}
+		recipeSaveList.push(recipeSave)
 
-	// 	localStorage.setItem("savedRecipes",JSON.stringify(recipeSaveList))
-	// 	recipeSave = {};
-	// 	$("#saveRecipe").text("recipe Saved!")
-	// });
+		localStorage.setItem("savedRecipes",JSON.stringify(recipeSaveList))
+		recipeSave = {};
+		$("#saveRecipe" + i).text("recipe Saved!")
+	});
