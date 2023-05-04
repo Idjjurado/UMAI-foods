@@ -142,12 +142,11 @@ $.ajax(settingsSpicy).done(function (response) {
     console.log(response);
         
     for (var i = 1; i < 10; i++) {
-        console.log(response.meals[i]);
-        if (response.meals[i]) {
+		if (response.meals[i]) {
             const recipeInfo = response.meals[i];
             const recipeCard = document.createElement("div");
-            recipeCard.setAttribute("class", "card-style");
             recipeCard.setAttribute("id", "card-recipe" + i);
+			recipeCard.setAttribute("class", "card-style")
             document.getElementById("card-container").appendChild(recipeCard);
 
             const recipeSection = document.createElement("section");
@@ -173,11 +172,8 @@ $.ajax(settingsSpicy).done(function (response) {
             recipeVideo.setAttribute("target", "_blank");
             recipeVideo.innerText = "WATCH RECIPE VIDEO HERE!"
             recipeSection.appendChild(recipeVideo);
-            
-            $("#recipe-link").attr("href", recipeInfo.strSource);
-        }
-    }
-    
+    	}
+	}
 });
 
 // $("#saveRecipe").click(function(){

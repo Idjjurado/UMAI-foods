@@ -19,7 +19,6 @@ $.ajax(settingsSearchmeal).done(function (response) {
         if (response.meals[i]) {
             const recipeInfo = response.meals[i];
             const recipeCard = document.createElement("div");
-            recipeCard.setAttribute("class", "card-style");
             recipeCard.setAttribute("id", "card-recipe" + i);
             document.getElementById("card-container").appendChild(recipeCard);
 
@@ -46,7 +45,13 @@ $.ajax(settingsSearchmeal).done(function (response) {
             recipeVideo.setAttribute("target", "_blank");
             recipeVideo.innerText = "WATCH RECIPE VIDEO HERE!"
             recipeSection.appendChild(recipeVideo);
-    
+
+            const recipeLink = document.createElement('a');
+			recipeCard.parentNode.insertBefore(recipeLink, recipeCard);
+			recipeLink.appendChild(recipeCard);
+            recipeLink.setAttribute("class", "card-style");
+			recipeLink.setAttribute("href", recipeInfo.strSource);
+                        
         } else if (response.meals[i] === undefined) {
             return 'Undefined value!';
         }
