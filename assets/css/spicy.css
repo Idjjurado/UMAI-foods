@@ -117,7 +117,7 @@
             margin: 0 20px;
         }
         
-        #rrimage {
+        .rrimage {
             width: 75%;
             margin: 20px;
             border: 2px solid var(--black-bean);
@@ -149,6 +149,14 @@
             border-radius: 10px;
             background-color: var(--black-bean);
         }
+
+        #saveRecipe {
+            color: var(--beige);
+            padding: 10px;
+            border-radius: 10px;
+            background-color: var(--black-bean);
+        }
+        
         
         .card-style a:hover {
             color: black;

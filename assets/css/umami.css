@@ -117,7 +117,7 @@
             margin: 0 20px;
         }
         
-        #rrimage {
+        .rrimage {
             width: 75%;
             margin: 20px;
             border: 2px solid var(--indigo-dye);
@@ -145,6 +145,15 @@
         }
         
         .card-style a {
+            color: var(--platinum);
+            padding: 10px;
+            border-radius: 10px;
+            background-color: var(--indigo-dye);
+            width: 60%;
+            
+        }
+
+        #saveRecipe {
             color: var(--platinum);
             padding: 10px;
             border-radius: 10px;

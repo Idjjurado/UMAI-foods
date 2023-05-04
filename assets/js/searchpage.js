@@ -15,42 +15,41 @@ const settingsSearchmeal = {
 $.ajax(settingsSearchmeal).done(function (response) {
     console.log(response);
     
-    const recipeInfo = response.meals[0];
-    console.log(recipeInfo);
-    
-    for (var i = 1; i < 20; i++) {
-        console.log(response.meals[i]);
+    for (var i = 1; i < 10; i++) {
         if (response.meals[i]) {
+            const recipeInfo = response.meals[i];
             const recipeCard = document.createElement("div");
             recipeCard.setAttribute("class", "card-style");
-            recipeCard.setAttribute("id", "card-recipe");
+            recipeCard.setAttribute("id", "card-recipe" + i);
             document.getElementById("card-container").appendChild(recipeCard);
 
             const recipeSection = document.createElement("section");
             recipeSection.setAttribute("id", "recipe-section");
-            document.getElementById("card-recipe").appendChild(recipeSection);
+            recipeCard.appendChild(recipeSection);
 
             const recipeSave = document.createElement("a");
             recipeSave.setAttribute("id", "saveRecipe");
-            document.getElementById("recipe-section").appendChild(recipeSave);
+            recipeSave.innerText = "Save this recipe!";
+            recipeSection.appendChild(recipeSave);
 
             const recipeTitle = document.createElement("h3");
-            recipeTitle.setAttribute("id", "recipe-title");
-            document.getElementById("recipe-section").appendChild(recipeTitle);
+            recipeTitle.innerText = recipeInfo.strMeal;
+            recipeSection.appendChild(recipeTitle);
            
             const recipeImage = document.createElement("img");
-            recipeImage.setAttribute("id", "rrimage");
-            document.getElementById("recipe-section").appendChild(recipeImage);
+            recipeImage.setAttribute("class", "rrimage")
+            recipeImage.setAttribute("src", recipeInfo.strMealThumb);
+            recipeSection.appendChild(recipeImage);
 
             const recipeVideo = document.createElement("a");
-            recipeVideo.setAttribute("id", "recipe-video");
-            document.getElementById("recipe-section").appendChild(recipeVideo);
-            
-            $("#recipe-title").text(recipeInfo.strMeal);
-            $("#rrimage").attr("src", recipeInfo.strMealThumb);
-            $("#recipe-link").attr("href", recipeInfo.strSource);
-            $("#recipe-video").attr(recipeInfo.strYoutube);
-        }
-    }
+            recipeVideo.setAttribute("href", recipeInfo.strYoutube);
+            recipeVideo.setAttribute("target", "_blank");
+            recipeVideo.innerText = "WATCH RECIPE VIDEO HERE!"
+            recipeSection.appendChild(recipeVideo);
     
+        } else if (response.meals[i] === undefined) {
+            return 'Undefined value!';
+        }
+    
+    }
 });
