@@ -4,204 +4,162 @@
     --brown: rgb(202, 112, 80);
     --sunglow: #ffc853ff;
     --beige: #faf9e3ff;
-        }
+}
         
-    /* * {
-        border: 2px solid black;
-    } */
 
-    body {
-        background-color: var(--brown);
-    }
-    
-    main {
-       background-color: var(--brown);
-    }
-      
-    header {
-        background-color: var(--brown);
-        position: sticky;
-        top: 0;
-    }
+body {
+    background-color: var(--brown);
+}
 
-    header h3 {
-        content-visibility: hidden;
-        text-align: center;
-        padding-top: 25px;
-        height: 75px;
-        width: 200px;
-    }
-    
-    header h3:hover {
-        content-visibility: visible;
-        color: var(--beige);
-    }
+main {
+   background-color: var(--brown);
+}
+  
+
+/* This is where the header styling starts */
+header {
+    background-color: var(--brown);
+    position: sticky;
+    top: 0;
+}
+
+
+/* This is the easter egg */
+header h3 {
+    content-visibility: hidden;
+    text-align: center;
+    padding-top: 25px;
+    height: 75px;
+    width: 200px;
+}
+
+header h3:hover {
+    content-visibility: visible;
+    color: var(--beige);
+}
+
+#secret {
+    text-decoration: none;
+}
       
-    .navbar {
-        box-shadow: 0px 15px 20px -10px var(--black-bean);
-        padding: 20px;
-    }
-    
-    #headerTitle {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        background-color: var(--black-bean);
-        padding: 10px;
-    }
-    
-    #headerTitle a {
-    background-color: var(--black-bean);
-    border-radius: 20px;
+.navbar {
+    box-shadow: 0px 15px 20px -10px var(--black-bean);
     padding: 20px;
-    }
-        
-        .navbar {
-            background-color: var(--black-bean);
-            display: flex;
-        }
-    
-        .hover-text {
-            display: none;
-        }
-    
-        .three:hover {
-            width: 300px;
-            height: 80px;
-            position: relative;
-            right: 50px;
-        }
-    
-        .nav-item img:hover {
-            display: none;
-        }
-        
-        .nav-item img:hover + .hover-text {
-            display: inline;
-            font-size: 30px;
-            padding: 0;
-            border-radius: 10px;
-            font-family: 'Mochiy Pop P One', sans-serif;
-            color: var(--black-bean);
-        }
-        
-        
-        .nav-item:hover + .nav-item img:hover {
-            display: none;
-        }
-        
-        .nav-link {
-            text-align: center;
-            width: 200px;
-            height: fit-content;
-            position: relative;
-            background-color: var(--ou-crimson);
-            border-radius: 20px;
-            margin: 20px 100px 0px 100px;
-            border: 2px solid var(--beige);
-            font-size: 150%;
-        }
-        
-        .nav-link:hover {
-            cursor: pointer;
-            background-color: var(--beige);
-            border: 2px solid var(--beige);
-        }
-    
-      
-        
-        
-        #ul {
-            list-style: none;
-            display: inline-block;
-        }
-        
-        #ul li {
-            float: left;
-            margin: 0 20px;
-        }
-        
-        .rrimage {
-            width: 75%;
-            margin: 20px;
-            border: 2px solid var(--black-bean);
-            border-radius: 25px;
-        }
-        
-        .card-style {
-            background-color: var(--ou-crimson);
-            font-family: 'Mochiy Pop P One', sans-serif;
-            color: rgb(221, 218, 213);
-            border-radius: 25px;
-            margin: 15px;
-            margin-top: 50px;
-            box-shadow: 0px 0px 15px 5px red;
-            text-align: center;
-            height: 100%;
-            padding: 20px;
-            flex: 17%;
-        }
-        
-        .card-style h3 {
-            margin-top: 20px;
-            font-size: 40px;
-        }
-        
-        .card-style a {
-            color: var(--beige);
-            padding: 10px;
-            border-radius: 10px;
-            background-color: var(--black-bean);
-            text-decoration: none;
-        }
-
-        #saveRecipe {
-            color: var(--beige);
-            padding: 10px;
-            border-radius: 10px;
-            background-color: var(--black-bean);
-        }
-        
-        
-        .card-style a:hover {
-            color: black;
-            padding: 10px;
-            border: 2px solid var(--black-bean);
-            border-radius: 10px;
-            background-color: var(--ou-crimson);
-            box-shadow: 5px 5px 5px var(--black-bean);
-        }
-
-
-#surprise-recipe {
-    width: 40%;
 }
 
-#middle {
+#headerTitle {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    font-size: 150%;
-    height: 100%;
-    width: 20%;
-    
+    background-color: var(--black-bean);
+    padding: 10px;
 }
 
-#middle h3 {
-    margin-bottom: 75px;
+#headerTitle a {
+background-color: var(--black-bean);
+border-radius: 20px;
+padding: 20px;
+}
+        
+.navbar {
+    background-color: var(--black-bean);
+    display: flex;
 }
 
-#surprise-anime {
-    width: 40%;
+
+/* This is where the button styling starts */
+.nav-link {
+    text-align: center;
+    width: 200px;
     height: fit-content;
+    position: relative;
+    background-color: var(--ou-crimson);
+    border-radius: 20px;
+    margin: 20px 100px 0px 100px;
+    border: 2px solid var(--beige);
+    font-size: 150%;
 }
 
-#reload:hover {
-    cursor: pointer;
-    background-color: var(--dark-purple);
-    box-shadow: 0px 0px 15px 5px var(--dark-purple);
+.hover-text {
+    display: none;
+}
 
+.three:hover {
+    width: 300px;
+    height: 80px;
+    position: relative;
+    right: 50px;
+}
+    
+.nav-item img:hover {
+    display: none;
+}
+        
+.nav-item img:hover + .hover-text {
+    display: inline;
+    font-size: 30px;
+    padding: 0;
+    border-radius: 10px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: var(--black-bean);
+}
+
+.nav-link:hover {
+    cursor: pointer;
+    background-color: var(--beige);
+    border: 2px solid var(--beige);
+}
+    
+
+/* This is where the card styling starts */
+.card-style {
+    background-color: var(--ou-crimson);
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: rgb(221, 218, 213);
+    border-radius: 25px;
+    margin: 15px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 15px 5px red;
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+    flex: 17%;
+}
+
+.card-style h3 {
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.rrimage {
+    width: 75%;
+    margin: 20px;
+    border: 2px solid var(--black-bean);
+    border-radius: 25px;
+}
+              
+.card-style a {
+    color: var(--beige);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--black-bean);
+    text-decoration: none;
+}
+
+#saveRecipe {
+    color: var(--beige);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--black-bean);
+}
+            
+.card-style a:hover {
+    color: black;
+    padding: 10px;
+    border: 2px solid var(--black-bean);
+    border-radius: 10px;
+    background-color: var(--ou-crimson);
+    box-shadow: 5px 5px 5px var(--black-bean);
 }
 
 .wrapper {
@@ -209,7 +167,7 @@
     flex-wrap: wrap;
 }
 
-
+/* The media queries to help make the site mobile friendly */
 @media only screen and (max-width: 1240px) {
     
     #headerTitle span {
@@ -221,7 +179,6 @@
         margin: 20px;
         margin-right: 150px;
     }
-
 } 
 
 @media only screen and (max-width: 1000px) {
@@ -234,5 +191,4 @@
         margin: 0px;
         margin-right: 0px;
     }
-    
 }
