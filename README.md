@@ -1,7 +1,7 @@
 # UMAI FOODS!
 ![UMAI RENGOKU!](/assets/images/umai-tasty.gif "Rengoku")
 
-link: 
+link: https://idjjurado.github.io/UMAI-foods/
 
 ## Description
 This passion project was created so fans of anime, cartoons,
@@ -19,6 +19,17 @@ containing a short description. If a user finds a recipe that wish to make they 
 the recipe with the click of a button. Which the user can find using the favorites button
 or by looking at the bottom of the main page. 
 
+# HOME PAGE!
+![Home Page](/assets/images/home.png "home page")
+
+# Sweets PAGE!
+![sweets page](/assets/images/sweets.png "sweets page")
+
+# Surprise PAGE!
+![surprise page](/assets/images/surprise.png "surprise page")
+
+These are the main screenshots of a flavor page, the home page, as well as the surprise me page for recipes!
+
 
 ## Attributions
 The font used for the main title of the page as well as the buttons on every page is called "Yeyey",
@@ -27,6 +38,8 @@ The soot sprite gif used in our title was created by Flavia-Elric on deviantart.
 Both of these resources were licensed as free to use by their respective creators.
 
 ## Credit
+Ismael Jimenez: https://github.com/Idjjurado
+
 Shanna Morris: https://github.com/ShannaRenee
 
 Daniel Pacheco: https://github.com/Daniel-0117
@@ -34,6 +47,9 @@ Daniel Pacheco: https://github.com/Daniel-0117
 Trenton Sallee: https://github.com/trentonsallee
 
 Rapid API: https://rapidapi.com/blog/how-to-use-an-api-with-javascript/
+
+(search functionality assistance)
+Simon Ugorji https://blog.bitsrc.io/how-to-construct-a-url-search-query-with-javascript-935188eb33e9
 
 ## License
 MIT License (see repo)
@@ -47,4 +63,3 @@ Must meet good quality coding standards (indention, scoping, naming, commenting 
 Must not use alerts,confirms, or prompts (look into modals)
 Must be deployed to Github Pages
 Must be interactive 
-### ()
