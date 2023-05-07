@@ -154,7 +154,7 @@ header h3:hover {
     text-decoration: none;
 }
 
-#saveRecipe {
+#recipeSavbutton {
     color: var(--platinum);
     padding: 10px;
     border-radius: 10px;

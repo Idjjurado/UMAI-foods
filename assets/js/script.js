@@ -1,59 +1,58 @@
 var recipeHolder = $('#favorites')
 var clearBtn = $('#clear')
-   let ingredName = ""
+let ingredName = ""
 
 function clear() {
     localStorage.clear();
     recipeHolder.children().remove();
 }
 
-//Displays the saved Meal array elements of name, ingredients, and ingredient ammount
-const savedRecipes = JSON.parse(localStorage.getItem("savedRecipes"))
-if (!savedRecipes){
-	recipeHolder.text("There are no recipes saved.")
-}
-else {
-	console.log(savedRecipes)
-	for (let i = 0; i < savedRecipes.length; i++){
-		let recipeDiv = $("<div>")
-		recipeDiv.append($("<p>").text(savedRecipes[i].recipeName))
-		recipeHolder.append(recipeDiv)
-		const ingredients = savedRecipes[i].ingredients
-		let ingredientList = $("<ul>")
-		recipeDiv.append(ingredientList)
-		//for (let j = 0; j < ingredients.length; j++) {
-        for (let j = 0; j < 8; j++) {
-
-			const ing = $("<li>")
-			ing.text(ingredients[j].ingredName)
-			ingredientList.append(ing)
-		}
-	}
-
-    if (recipeHolder.children().length > 6) {
-        recipeHolder.children().eq(6).remove();
-     }
-}
 
 const settings = {
-	async: true,
+    async: true,
 	crossDomain: true,
 	url: 'https://themealdb.p.rapidapi.com/search.php?',
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '8fba490658msh30c9e8c9a48dc6bp15f465jsnfa24de2a900b',
+        'X-RapidAPI-Key': '8fba490658msh30c9e8c9a48dc6bp15f465jsnfa24de2a900b',
 		'X-RapidAPI-Host': 'themealdb.p.rapidapi.com'
 	}
 };
 
 $.ajax(settings).done(function (response) {
-	console.log(response);
+    console.log(response);
+    //Displays the saved Meal array elements of name, ingredients, and ingredient ammount
+    const savedRecipes = JSON.parse(localStorage.getItem("savedRecipes"))
+    if (!savedRecipes){
+        recipeHolder.text("There are no recipes saved.")
+    }
+    else {
+        console.log(savedRecipes)
+        for (let i = 0; i < savedRecipes.length; i++){
+            let recipeDiv = $("<div>")
+            recipeDiv.append($("<p>").text(savedRecipes[i].recipeName))
+            recipeHolder.append(recipeDiv)
+            const ingredients = savedRecipes[i].ingredients
+            let ingredientList = $("<ul>")
+            recipeDiv.append(ingredientList)
+            for (let i = 0; i < 8; i++) {
+    
+                const ing = $("<li>")
+                ing.text(ingredients[i].ingredName)
+                ingredientList.append(ing)
+            }
+        }
+    
+        if (recipeHolder.children().length > 6) {
+            recipeHolder.children().eq(6).remove();
+         }
+    }
 });
 
 //check if it exists and rewrite the variable
 let userQuery = (localStorage.getItem('userQuery')) ? 
-                    JSON.parse(localStorage.getItem('userQuery')) : 
-                           { "s" : ""};
+JSON.parse(localStorage.getItem('userQuery')) : 
+{ "s" : ""};
 
 //save user query
 localStorage.setItem('userQuery', JSON.stringify(userQuery));
@@ -100,5 +99,4 @@ let url = doQuery('https://themealdb.p.rapidapi.com/search.php', userRecipe);
 //send to the browser
 console.log(url);
 console.log(localStorage);
-
 clearBtn.on('click', clear)
