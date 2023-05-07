@@ -37,14 +37,24 @@ created by DonMarciano, and was accessed from fontspace.com.
 The soot sprite gif used in our title was created by Flavia-Elric on deviantart.com.
 Both of these resources were licensed as free to use by their respective creators.
 
+## Technologies used!
+We ended up using quite a few different things!
+- Jquery, Bootstrap, HTML, CSS, and JavaScript as well!
+- APIs we used were as follows
+  - https://rapidapi.com/thecocktaildb/api/themealdb/
+  - https://rapidapi.com/brian.rofiq/api/anime-db
+- For project management we used GitHub, also GitHub is where our code is hosted and depployed
+- We used FIGMA! for wireframing
+- CANVA was used for presentation outline
+
 ## Credit
-Ismael Jimenez: https://github.com/Idjjurado
+Ismael Jimenez: https://github.com/Idjjurado (JavaScript and all scripting/API wiring)
 
-Shanna Morris: https://github.com/ShannaRenee
+Shanna Morris: https://github.com/ShannaRenee (Styling and design/Thematic choices and overlays)
 
-Daniel Pacheco: https://github.com/Daniel-0117
+Daniel Pacheco: https://github.com/Daniel-0117 (HTML, file structure, presentation creation and information)
 
-Trenton Sallee: https://github.com/trentonsallee
+Trenton Sallee: https://github.com/trentonsallee (HTML/Botstrap additions)
 
 Rapid API: https://rapidapi.com/blog/how-to-use-an-api-with-javascript/
 
