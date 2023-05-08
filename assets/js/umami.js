@@ -31,6 +31,7 @@ $.ajax(settingsUmami).done(function (response) {
 
             const recipeSavbutton = document.createElement("a");
             recipeSavbutton.setAttribute("id", "saveRecipe");
+			recipeSavbutton.setAttribute("class", "save-button")
             recipeSavbutton.innerText = "Save this recipe!";
             recipeSection.appendChild(recipeSavbutton);
 
@@ -57,22 +58,28 @@ $.ajax(settingsUmami).done(function (response) {
 	
 	for (var i = 1; i < response.meals.length; i++) {
 			const recipeInfo = response.meals[i];
-			console.log(response.meals[i].strMeal)
-			recipeSave ["recipeName"] = response.meals[i].strMeal
-			recipeSave ["ingredients"] = []
-			for (var i = 1; i < 20; i++) {
-					const cookingMeasure = recipeInfo["strMeasure" + i];
-					const ingredName = recipeInfo["strIngredient" + i];
+			console.log(recipeInfo.strMeal)
+			recipeSave["recipeName"] = recipeInfo.strMeal
+			recipeSave["ingredients"] = []
+			for (var j = 1; j < 20; j++) {
+				const  cookingMeasure = recipeInfo["strMeasure" + j]
+				const cookingIngredient = recipeInfo["strIngredient" + j]
+				console.log(cookingMeasure)
+				console.log(cookingIngredient)
+
+				recipeSave.ingredients.push({ingredients: cookingMeasure + " " + cookingIngredient})
+					// let cookingMeasure = recipeInfo.strMeasure[j] = [];
+					// let ingredName = recipeInfo.strIngredient[j] = [];
 	
-					recipeSave.ingredients.push({"cookingMeasure":cookingMeasure, "ingredName":ingredName})
+					// recipeSave.ingredients.push({"cookingMeasure":cookingMeasure, "ingredName":ingredName})
 	
-					console.log(recipeInfo["strIngredient" + i].length > 0);
+					// console.log(recipeInfo["strIngredient" + j].length > 0);
 				} 
 			}
 			console.log(recipeSave)
 			
 		//upon clicking an 'a' element, create the Recipe with the elements of name, ingredients, and ingredient ammount
-		$("#saveRecipe").click(function(){
+		$(".save-button").click(function(){
 			if (recipeSaveButtonText === "recipe Saved!"){
 				return
 			}
@@ -84,7 +91,6 @@ $.ajax(settingsUmami).done(function (response) {
 		
 			localStorage.setItem("savedRecipes",JSON.stringify(recipeSaveList))
 			recipeSave = {};
-			$("#saveRecipe").text("recipe Saved!")
 		});
 });
 
